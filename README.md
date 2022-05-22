@@ -4,11 +4,12 @@
 - Cadastro de novas formulas para resolução de outros problemas. Dessa forma, a própria comunidade pode contribuir adicionando mais fórmulas para resolver mais contas 
 - Login
 - Cadastro de usuários
+- Resolução de equações algébricas simples (14 = 10 + 2x - 5)
 
 ## Especificações funcionais:
-- O sistema deve comportar o cadastro de novas fórmulas e cálculos matemáticos. Por exemplo, deve ser possível cadastrar a fórmula de bhaskara, e através dessa formula pronta, consigo resolver qualquer conta com esta formula, como passar os valores das váriaveis, encontrar o valor de uma diferente variável da fórmula (i.e e = mc²)
+- O sistema deve comportar o cadastro de novas fórmulas e cálculos matemáticos. Por exemplo, deve ser possível cadastrar a fórmula de bhaskara, e através dessa formula pronta, conseguir resolver qualquer conta com esta formula, como passar os valores das váriaveis, encontrar o valor de uma diferente variável da fórmula (i.e e = mc²)
 - Deve ser possível, como no caso da bhaskara, passar como parâmetro uma equação de segundo grau e resolver a mesma, entregando seu resultado.
-
+- O sistema deve fazer papel de uma calculadora, reconhecendo imputs como / (dividido)
 ## Trabalhos futuros
 - Mostrar a resolução da fórmula, os cálculos que levaram aquele resultado
 
