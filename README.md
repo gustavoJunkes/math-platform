@@ -10,9 +10,11 @@
 - O sistema deve comportar o cadastro de novas fórmulas e cálculos matemáticos. Por exemplo, deve ser possível cadastrar a fórmula de bhaskara, e através dessa formula pronta, conseguir resolver qualquer conta com esta formula, como passar os valores das váriaveis, encontrar o valor de uma diferente variável da fórmula (i.e e = mc²)
 - Deve ser possível, como no caso da bhaskara, passar como parâmetro uma equação de segundo grau e resolver a mesma, entregando seu resultado.
 - O sistema deve fazer papel de uma calculadora, reconhecendo imputs como / (dividido)
+- Utilizar fórmulas cadastradas para resolver problemas matemáticos. Exemplo, a área de um triângulo, passando um problema e utilizando a fórmula cadastrada a = (b*h)/2 para dar a resposta
 ## Trabalhos futuros
 - Mostrar a resolução da fórmula, os cálculos que levaram aquele resultado
-
+- Receber um problema, extrair seus dados e trazer o resultado
+- Receber um problema e identificar qual cálculo mais adequado para sua resolução
 
 
 # MathPlatformFrontend
