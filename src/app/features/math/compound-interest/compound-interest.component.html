@@ -4,31 +4,76 @@
     <div class="card-title">
         <h2>Juros Compostos</h2>    
     </div>
+    <form [formGroup]="calculationForm">
+        <div id="float-container">
+            <div  class="input-container">
+                <label for="initial-value">Valor inicial</label>
+                <br>
+                <input type="text" class="input-field" id="initial-value" formControlName="initialValue">
+            </div>
+        
+            <div class="input-container">
+                <label for="interest-value">Valor dos juros</label>
+                <br>
+                <input type="text" class="input-field" id="interest-value" formControlName="interestValue">
+            </div>
+           
+            <div  class="input-container">
+                <label for="value-period">Valor por período</label>
+                <br>
+                <input type="text" class="input-field" id="value-period" formControlName="valuePeriod">
+            </div>
+        
+            <div class="input-container ">
+                <label for="number-periods">Quantidade de períodos</label>
+                <br>
+                <input type="text" class="input-field" id="number-periods" formControlName="numberPeriods">
+            </div>
+        </div>    
+        
+        <button (click)="calculate()">Calcular</button>
+    </form>
     
-    <div id="float-container">
-        <div  class="input-container">
-            <label for="initial-value">Valor inicial</label>
-            <br>
-            <input type="text" class="input-field" id="initial-value">
-        </div>
-    
-        <div class="input-container">
-            <label for="interest-value">Valor dos juros</label>
-            <br>
-            <input type="text" class="input-field" id="interest-value">
-        </div>
-       
-        <div  class="input-container">
-            <label for="value-period">Valor por período</label>
-            <br>
-            <input type="text" class="input-field" id="value-period">
-        </div>
-    
-        <div class="input-container ">
-            <label for="number-periods">Quantidade de períodos</label>
-            <br>
-            <input type="text" class="input-field" id="number-periods">
-        </div>
+</div>
+<button>Explicação</button>
+<div class="explanation-card">
+    <h2>Como funciona o cálculo de juros compostos</h2>
+    <p> O cálculo de juros compostos consiste em somar o montante inicial com o valor dos juros e aplicação definidos para cada período,
+         de forma que os juros dos períodos seguintes serão calculados a partir da soma dos juros dos períodos anteriores. O resultado pode ser extraído através da seguinte fórmula:</p>
+
+    <p>
+        Consiste em uma soma composta, em que para cada período é adicionado ao montante o aporte por período e os juros sobre o montante, de forma que no próximo período os juros sejam calculados levando em consideração os juros adicionados ao último período.
+
+    </p>    
+</div>
+
+<div class="calculation-card">
+    <div class="card-title">
+        <h2>Juros Simples</h2>    
     </div>
+    <form [formGroup]="calculationForm">
+        <div id="float-container">
+            <div  class="input-container">
+                <label for="initial-value">Valor inicial</label>
+                <br>
+                <input type="text" class="input-field" id="initial-value" formControlName="initialValue">
+            </div>
+        
+            <div class="input-container">
+                <label for="interest-value">Valor dos juros</label>
+                <br>
+                <input type="text" class="input-field" id="interest-value" formControlName="interestValue">
+            </div>
+           
+            <div class="input-container ">
+                <label for="number-periods">Quantidade de períodos</label>
+                <br>
+                <input type="text" class="input-field" id="number-periods" formControlName="numberPeriods">
+            </div>
+        </div>    
+        
+        <button>Explicação</button>
+        <button (click)="calculate()">Calcular</button>
+    </form>
     
 </div>

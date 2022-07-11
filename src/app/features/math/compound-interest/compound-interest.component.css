@@ -7,7 +7,7 @@
     padding: 0.5%;
     padding-left: 5%;    
     box-sizing: border-box;
-    
+    padding-bottom: 10%;
 }
 
 .card-title {
@@ -32,8 +32,7 @@
 .input-container {
     float: left;
     width: 50%;
-    margin-bottom: 6%;
-    
+    margin-bottom: 6%;    
 }
 
 #float-container:after {
@@ -42,6 +41,21 @@
     clear: both;
 }
 
-.left-input {
+/*Nao utilizado*/
+.calculate-button {
+    margin: 2%;
+    margin-top: 10%;
+    margin-left: 0;
+}
 
+.explanation-card {
+    background-color: white;
+    opacity: 100%;
+    width: 57%;
+    height: fit-content;
+    margin: auto;
+    margin-top: 1%;
+    padding: 2%;
+    box-sizing: border-box;
+    font-size: 0.9em;
 }

@@ -2,5 +2,14 @@
     width: 100%;
     height: 20%;
     border-color: black;
-    background-color: #0075FF
+    background-color: #0075FF;
+    color: white;
+    padding-top: 5%;
+    box-sizing: border-box;
+}
+
+#title {
+    width: fit-content;
+    margin: auto;
+    font-weight: lighter;
 }

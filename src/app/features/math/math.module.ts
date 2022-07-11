@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { MathRoutingModule } from './math-routing.module';
 import { CompoundInterestComponent } from './compound-interest/compound-interest.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,9 @@ import { CompoundInterestComponent } from './compound-interest/compound-interest
   imports: [
     CommonModule,
     MathRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class MathModule { }
