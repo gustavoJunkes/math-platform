@@ -8,7 +8,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class CompoundInterestComponent implements OnInit {
 
-  calculationForm!: FormGroup
+  calculationForm!: FormGroup;
+  showExplanation: boolean = true;
 
   constructor(private formBuilder : FormBuilder) { }
 
@@ -50,5 +51,9 @@ export class CompoundInterestComponent implements OnInit {
     }
     finalValue = +(finalValue.toFixed(2))   
     window.alert(finalValue)
+  }
+
+  changeShowExplanation() {
+    this.showExplanation = !this.showExplanation;
   }
 }
