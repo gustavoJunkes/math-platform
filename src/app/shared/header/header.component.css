@@ -1,15 +1,45 @@
 #header { 
     width: 100%;
-    height: 20%;
-    border-color: black;
-    background-color: #0075FF;
-    color: white;
-    padding-top: 5%;
+    height: 23%;   
+    background-color: #3a3cff;
+    color: white; 
     box-sizing: border-box;
+    align-items: center;
+    position: relative;
+    align-items: center;
+    
 }
 
 #title {
-    width: fit-content;
+    font-weight: 100;
+    text-align: center;
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 5%;    
+}
+
+#div-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    height: fit-content;
+    margin-bottom: 0px;
+    font-size: 0.8em;
+    font-weight: 450;
+    width: 57%;
     margin: auto;
-    font-weight: lighter;
+}
+
+p {
+    margin: 0px;
+    cursor: not-allowed;
+}
+
+h1 {
+    font-weight: 500;
+}
+
+#main-div-links {
+    background-color: #3a3cff;
 }
