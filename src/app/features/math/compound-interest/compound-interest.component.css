@@ -1,30 +1,34 @@
 .calculation-card {
-    width: 57%;    
+    width: 70%;
     background-color: #F4F4F5;
-    height: 250px;
+    height: fit-content;
     margin: auto;
     margin-top: 8%;
     padding: 0.5%;
-    padding-left: 5%;    
+    padding-left: 5%;
     box-sizing: border-box;
-    padding-bottom: 10%;
+    padding-bottom: 1%;
+    font-size: 3ch;
+}
+
+div.card-title > h1 {
+    font-size: 1.5em;
+    font-weight: 500;
 }
 
 .card-title {
     margin-left: 0%;
     margin-top: 4%;
 }
-
 .input-field {
     width: 50%;
     border-radius: 3px;
     border-width: 0.5px;
     border-color: #47525E;
-    border-style: solid;  
+    border-style: solid;
     display: block;
-    margin-top: 1%;   
-    height: 18px;  
-    font-size: 0.7em; 
+    margin-top: 1%;
+    font-size: 0.9em;
     padding-left: 3%;
 }
 
@@ -32,7 +36,7 @@
 .input-container {
     float: left;
     width: 50%;
-    margin-bottom: 6%;    
+    margin-top: 6%;
 }
 
 #float-container:after {
@@ -56,10 +60,21 @@
     margin-top: 1%;
     padding: 2%;
     box-sizing: border-box;
-    font-size: 0.9em;
+    font-size: 1em;
+
 }
 
 .show-explanation-button {
     margin-left: 21.5%;
     margin-top: 1%;
 }
+
+.result-div {
+    margin-left: 22%;
+    display: flex;
+}
+
+.result-div p {
+    margin-right: 5%;
+}
+

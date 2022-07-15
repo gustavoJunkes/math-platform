@@ -9,7 +9,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class CompoundInterestComponent implements OnInit {
 
   calculationForm!: FormGroup;
-  showExplanation: boolean = true;
+  showExplanation: boolean = false;
+  calculationResult!: number;
+  interestCalculationResult!: number;
 
   constructor(private formBuilder : FormBuilder) { }
 
@@ -38,19 +40,21 @@ export class CompoundInterestComponent implements OnInit {
     
     var finalValue = initialValue
     var numericInterestValue = 0.;
+    var totalInterest = 0;
 
     for(var i = 0; i < numberPeriods; i++) {
       
       numericInterestValue = (interestValue / 100) * finalValue;
-      
+      totalInterest += numericInterestValue;
       finalValue += valuePeriod + numericInterestValue; 
-      console.log()
+      
       
       console.log(finalValue)
       console.log("------------------------------")
     }
     finalValue = +(finalValue.toFixed(2))   
-    window.alert(finalValue)
+    this.calculationResult = finalValue;
+    this.interestCalculationResult = totalInterest;
   }
 
   changeShowExplanation() {
