@@ -45,3 +45,29 @@ p {
 #main-div-links {
     background-color: #3a3cff;
 }
+
+@media (max-width: 950px) {
+    div#title {
+        font-size: 15em;
+        margin-left: 15%;
+        margin-top: 20%;
+    }
+    div#main-div-links div {
+        justify-content: space-around;
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    div#title {
+        font-size: 11em;
+        margin-left: 15%;
+        margin-top: 20%;
+    }
+    div#main-div-links div {
+        justify-content: space-between;
+        width: 100%;
+        font-size: 0.9em;
+    }
+
+}    
