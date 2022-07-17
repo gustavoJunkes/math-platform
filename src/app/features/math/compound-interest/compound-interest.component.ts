@@ -12,49 +12,52 @@ export class CompoundInterestComponent implements OnInit {
   showExplanation: boolean = false;
   calculationResult!: number;
   interestCalculationResult!: number;
-
-  constructor(private formBuilder : FormBuilder) { }
+  keys!: string[];
+  constructor(private formBuilder: FormBuilder) { }
+  resultObject!: any;
+  title: string = "Juros compostos"
 
   ngOnInit(): void {
     this.calculationForm = this.formBuilder.group({
-      initialValue: this.formBuilder.control('', [
+      "Valor inicial": this.formBuilder.control('0', [
         Validators.required
       ]),
-      interestValue: this.formBuilder.control('', [
+      "Valor dos juros": this.formBuilder.control('0', [
         Validators.required
       ]),
-      valuePeriod: this.formBuilder.control('', [
+      "Valor por período": this.formBuilder.control('0', [
         Validators.required
       ]),
-      numberPeriods: this.formBuilder.control('', [
+      "Número de períodos": this.formBuilder.control('0', [
         Validators.required
       ]),
-    })
+    })    
   }
 
-  calculate() {
-    var initialValue = Number(this.calculationForm.controls['initialValue'].value);
-    var interestValue = Number(this.calculationForm.controls['interestValue'].value);
-    var numberPeriods = Number(this.calculationForm.controls['numberPeriods'].value);
-    var valuePeriod = Number(this.calculationForm.controls['valuePeriod'].value);
-    
-    var finalValue = initialValue
+  calculate(form: FormGroup) {
+    var initialValue = Number(form.controls['Valor inicial'].value);
+    var interestValue = Number(form.controls['Valor dos juros'].value);
+    var numberPeriods = Number(form.controls['Valor por período'].value);
+    var valuePeriod = Number(form.controls['Número de períodos'].value);
+
+    var finalValue = initialValue;
     var numericInterestValue = 0.;
     var totalInterest = 0;
 
-    for(var i = 0; i < numberPeriods; i++) {
-      
+    for (var i = 0; i < numberPeriods; i++) {
+
       numericInterestValue = (interestValue / 100) * finalValue;
       totalInterest += numericInterestValue;
-      finalValue += valuePeriod + numericInterestValue; 
-      
-      
+      finalValue += valuePeriod + numericInterestValue;
+
+
       console.log(finalValue)
       console.log("------------------------------")
     }
-    finalValue = +(finalValue.toFixed(2))   
+    finalValue = +(finalValue.toFixed(2))
     this.calculationResult = finalValue;
     this.interestCalculationResult = totalInterest;
+    console.log(finalValue)
   }
 
   changeShowExplanation() {

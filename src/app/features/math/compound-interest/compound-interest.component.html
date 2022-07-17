@@ -1,46 +1,6 @@
 <app-header></app-header>
 
-<div class="calculation-card">
-    <div class="card-title">
-        <h1>Juros Compostos</h1>    
-    </div>
-    <form [formGroup]="calculationForm">
-        <div id="float-container">
-            <div  class="input-container">
-                <label for="initial-value">Valor inicial</label>
-                <br>
-                <input type="number" class="input-field" id="initial-value" formControlName="initialValue">
-            </div>
-        
-            <div class="input-container">
-                <label for="interest-value">Valor dos juros</label>
-                <br>
-                <input type="number" class="input-field" id="interest-value" formControlName="interestValue">
-            </div>
-           
-            <div  class="input-container">
-                <label for="value-period">Valor por período</label>
-                <br>
-                <input type="number" class="input-field" id="value-period" formControlName="valuePeriod">
-            </div>
-        
-            <div class="input-container ">
-                <label for="number-periods">Quantidade de períodos</label>
-                <br>
-                <input type="number" class="input-field" id="number-periods" formControlName="numberPeriods">
-            </div>
-        </div>    
-        
-        <button class="calculate-button little-button" (click)="calculate()">Calcular</button>
-    </form>
-    
-</div>
-
-
-<div class="result-div" *ngIf="calculationResult">
-   <p>Resultado final: {{calculationResult}}</p>
-   <p>Total de juros: {{interestCalculationResult}}</p>
-</div>
+<app-card-calculation [title]="title" [form]="calculationForm" (resultObject)="calculate($event)"></app-card-calculation>
 
 <div id="div-explanation-button">
     <div class="explanation-card" *ngIf="showExplanation" >
@@ -56,33 +16,3 @@
     <button (click)="changeShowExplanation()"  class="show-explanation-button">Mostrar Explicação</button>    
 </div>
 
-<div class="calculation-card">
-    <div class="card-title">
-        <h2>Juros Simples</h2>    
-    </div>
-    <form [formGroup]="calculationForm">
-        <div id="float-container">
-            <div  class="input-container">
-                <label for="initial-value">Valor inicial</label>
-                <br>
-                <input type="text" class="input-field" id="initial-value" formControlName="initialValue">
-            </div>
-        
-            <div class="input-container">
-                <label for="interest-value">Valor dos juros</label>
-                <br>
-                <input type="text" class="input-field" id="interest-value" formControlName="interestValue">
-            </div>
-           
-            <div class="input-container ">
-                <label for="number-periods">Quantidade de períodos</label>
-                <br>
-                <input type="text" class="input-field" id="number-periods" formControlName="numberPeriods">
-            </div>
-        </div>    
-        
-        <button>Explicação</button>
-        <button (click)="calculate()">Calcular</button>
-    </form>
-    
-</div>

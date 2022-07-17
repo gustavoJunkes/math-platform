@@ -1,0 +1,23 @@
+<div class="calculation-card">
+    <div class="card-title">
+        <h1>{{title}}</h1>    
+    </div>
+    <form [formGroup]="form">
+        <div id="float-container" >
+            <div class="input-container" *ngFor="let value of keys">
+                <label for="{{value}}">{{value}}</label>
+                <br>
+                <input type="number" class="input-field" id="{{value}}" formControlName="{{value}}">
+            </div>
+        </div>    
+        
+        <button class="calculate-button little-button" (click)="calculate(form)">Calcular</button>
+    </form>
+    
+</div>
+
+
+<div class="result-div" *ngIf="calculationResult">
+   <p>Resultado final: {{calculationResult}}</p>
+   <p>Total de juros: {{interestCalculationResult}}</p>
+</div>
