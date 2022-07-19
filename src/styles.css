@@ -6,3 +6,13 @@ body { margin: 0;
     font-family: 'Lato', sans-serif;
     color: #47525E;
 }
+
+.generic-card {
+    background-color: #e6e6e6;
+    width: 70%;
+    height: fit-content;
+    margin: auto;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-top: 8%;
+}

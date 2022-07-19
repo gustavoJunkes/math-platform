@@ -6,12 +6,14 @@ import { MathRoutingModule } from './math-routing.module';
 import { CompoundInterestComponent } from './compound-interest/compound-interest.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataComponent } from './data/data.component';
+import { PercentageComponent } from './percentage/percentage.component';
 
 
 @NgModule({
   declarations: [
-    CompoundInterestComponent
+    CompoundInterestComponent,
     DataComponent,
+    PercentageComponent
   ],
   imports: [
     CommonModule,

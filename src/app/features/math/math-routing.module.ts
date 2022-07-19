@@ -1,3 +1,4 @@
+import { PercentageComponent } from './percentage/percentage.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CompoundInterestComponent } from './compound-interest/compound-interest.component';
@@ -19,6 +20,9 @@ const routes: Routes = [
     path: "datas",
     component: DataComponent
   },
+  {
+    path: "porcentagem",
+    component: PercentageComponent
   }
 ];
 
