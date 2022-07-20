@@ -14,7 +14,8 @@ export class HeaderComponent implements OnInit {
   }
 
   redirectToDate() {
-    this.router.navigate(['matematica/datas'])
+    window.alert("Funcionalidade indisponível nesta versão. Estamos trabalhando nisso...")
+    //this.router.navigate(['matematica/datas'])
   }
 
   redirectToInterest() {
