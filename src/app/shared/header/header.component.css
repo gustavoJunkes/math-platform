@@ -39,7 +39,7 @@ h1 {
 
 p {
     margin: 0px;
-    cursor: not-allowed;
+    cursor: pointer;
 }
 
 #main-div-links {

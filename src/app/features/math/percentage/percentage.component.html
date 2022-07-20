@@ -1,0 +1,12 @@
+<app-header></app-header>
+
+<app-card-calculation [form]="formPercentage1" [title]="'Quantos % um valor representa de outro'" (resultObject)="calculatePercentage1($event)"> </app-card-calculation>
+
+
+<app-card-calculation [form]="formPercentage2" [title]="'Quanto é x% de y'" (resultObject)="calculatePercentage2($event)"> </app-card-calculation>
+
+
+<app-card-calculation [form]="formPercentage3" [title]="'Aumento percentual'" (resultObject)="calculatePercentage3($event)"> </app-card-calculation>
+
+
+<app-card-calculation [form]="formPercentage4" [title]="'Diminuição percentual'" (resultObject)="calculatePercentage4($event)"> </app-card-calculation>

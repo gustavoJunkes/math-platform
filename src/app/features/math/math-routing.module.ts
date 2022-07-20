@@ -1,6 +1,8 @@
+import { PercentageComponent } from './percentage/percentage.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CompoundInterestComponent } from './compound-interest/compound-interest.component';
+import { DataComponent } from './data/data.component';
 
 
 const routes: Routes = [
@@ -13,6 +15,14 @@ const routes: Routes = [
     path: "",
     redirectTo: "juros",
     pathMatch: "full"
+  },
+  {
+    path: "datas",
+    component: DataComponent
+  },
+  {
+    path: "porcentagem",
+    component: PercentageComponent
   }
 ];
 
