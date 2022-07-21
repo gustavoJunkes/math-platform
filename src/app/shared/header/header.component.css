@@ -1,13 +1,13 @@
 #header { 
     width: 100%;
     height: 23%;   
-    background-color: #3a3cff;
+    background-color: #001f6c;
     color: white; 
     box-sizing: border-box;
     align-items: center;
     position: relative;
     align-items: center;
-    
+    padding-right: 5%;
 }
 
 #title {
@@ -33,7 +33,7 @@ h1 {
     margin-bottom: 3px;
     font-size: 1.2em;
     font-weight: 450;
-    width: 57%;
+    width: 47%;
     margin: auto;
 }
 
@@ -43,14 +43,27 @@ p {
 }
 
 #main-div-links {
-    background-color: #3a3cff;
+    background-color: #001f6c;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
     div#title {
         font-size: 15em;
         margin-left: 15%;
+        margin-top: 10%;
+    }
+}    
+
+@media (max-width: 800px) {
+    div#title {
         margin-top: 20%;
+    }
+}    
+@media (max-width: 950px) {
+    div#title {
+        font-size: 15em;
+        margin-left: 10%;
+       
     }
     div#main-div-links div {
         justify-content: space-around;
