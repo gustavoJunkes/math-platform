@@ -5,7 +5,7 @@ html, body { height: 100%; }
 body { margin: 0; 
     font-family: 'Lato', sans-serif;
     color: #3c4248;
-    background-color: #e5e5e5;
+    background-color: #ebe7e7;
 }
 
 .generic-card {
@@ -17,3 +17,4 @@ body { margin: 0;
     border-radius: 6px;
     margin-top: 8%;
 }
+
