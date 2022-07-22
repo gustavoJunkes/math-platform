@@ -54,7 +54,7 @@ export class CompoundInterestComponent implements OnInit {
       console.log(finalValue)
       console.log("------------------------------")
     }
-    finalValue = +(finalValue.toFixed(2))
+    finalValue = +(finalValue.toFixed(2));
     this.calculationResult = finalValue;
     this.interestCalculationResult = totalInterest;
     console.log(finalValue)

@@ -1,6 +1,13 @@
 <app-header></app-header>
 
+<h1 class="page-title">Cálculo de juros</h1>
+
 <app-card-calculation [title]="title" [form]="calculationForm" (resultObject)="calculate($event)"></app-card-calculation>
+
+<div class="result-div" *ngIf="true">
+    <p>Resultado final: {{calculationResult}}</p>
+    <p>Total de juros: {{interestCalculationResult}}</p>
+</div>
 
 <div id="div-explanation-button">
     <div class="explanation-card" *ngIf="showExplanation" >
@@ -15,6 +22,5 @@
     </div>
     <button (click)="changeShowExplanation()"  class="show-explanation-button">Mostrar Explicação</button>    
 </div>
-
 
 <app-footer></app-footer>
