@@ -38,6 +38,14 @@
     height: 1.2cm;
     border-color: #47525E;
 }
+
+div.result-div {
+    width: 95%;
+    font-size: large;
+    padding-left: 4%;
+    padding-top: 3%;
+    margin-top: 2%;
+}
 }
 
 
@@ -71,7 +79,8 @@
 }
 
 .result-div {
-    margin-left: 15%;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     background-color: #e6e6e6;
     width: 70%;

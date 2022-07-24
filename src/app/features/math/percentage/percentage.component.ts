@@ -12,6 +12,11 @@ export class PercentageComponent implements OnInit {
   formPercentage3!: FormGroup;
   formPercentage4!: FormGroup;
 
+  calculationResult1!: number;
+  calculationResult2!: number;
+  calculationResult3!: number;
+  calculationResult4!: number;
+
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
@@ -54,11 +59,16 @@ export class PercentageComponent implements OnInit {
 
   }
 
+  copy(value: number) {
+    navigator.clipboard.writeText(value+"")
+  }
+
   calculatePercentage1(form: FormGroup) {
     let value1 = form.controls["O valor"].value;
     let value2 = form.controls["É qual porcentagem do valor"].value;
 
     let result = (value1 / value2) * 100;
+    this.calculationResult1 = result;
     console.log("O resultado é: " + result + "%")
   }
 
@@ -67,6 +77,7 @@ export class PercentageComponent implements OnInit {
     let value2 = form.controls['y'].value;
 
     let result = (value1 / 100) * value2; 
+    this.calculationResult2 = result;
     console.log("O resultado é: " + result)
   }
 
@@ -75,6 +86,7 @@ export class PercentageComponent implements OnInit {
     let value2 = form.controls['Aumentou para'].value;
 
     let result = (value2 - value1) / value1 * 100;
+    this.calculationResult3 = result;
     console.log("O resultado é: " + result + "%")
   }
 
@@ -83,6 +95,7 @@ export class PercentageComponent implements OnInit {
     let value2 = form.controls['Diminuiu para'].value;
 
     let result = (value1 - value2) / value2 * 100;
+    this.calculationResult4 = result;
     console.log("O resultado é: " + result + "%")
   }
 
