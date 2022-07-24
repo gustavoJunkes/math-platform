@@ -3,14 +3,23 @@
 <h1 class="page-title">Porcentagem</h1>
 
 <app-card-calculation [form]="formPercentage1" [title]="'Quantos % um valor representa de outro'" (resultObject)="calculatePercentage1($event)"> </app-card-calculation>
-
+<div class="result-div">
+    <p>Resultado: {{calculationResult1}}%</p>
+</div>
 
 <app-card-calculation [form]="formPercentage2" [title]="'Quanto é x% de y'" (resultObject)="calculatePercentage2($event)"> </app-card-calculation>
-
+<div class="result-div">
+    <p>Resultado: {{calculationResult2}}</p>
+</div>
 
 <app-card-calculation [form]="formPercentage3" [title]="'Aumento percentual'" (resultObject)="calculatePercentage3($event)"> </app-card-calculation>
-
+<div class="result-div">
+    <p>Resultado: {{calculationResult3}}%</p>
+</div>
 
 <app-card-calculation [form]="formPercentage4" [title]="'Diminuição percentual'" (resultObject)="calculatePercentage4($event)"> </app-card-calculation>
+<div class="result-div">
+    <p>Resultado: {{calculationResult4}}%</p>
+</div>
 
 <app-footer></app-footer>
