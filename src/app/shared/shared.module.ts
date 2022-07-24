@@ -11,7 +11,8 @@ import { CardCalculationComponent } from './card-calculation/card-calculation.co
 @NgModule({
   declarations: [
     HeaderComponent,
-    CardCalculationComponent
+    CardCalculationComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +21,8 @@ import { CardCalculationComponent } from './card-calculation/card-calculation.co
   ],
   exports: [
     HeaderComponent,
-    CardCalculationComponent
+    CardCalculationComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }

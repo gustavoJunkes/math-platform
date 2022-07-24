@@ -4,7 +4,8 @@
 html, body { height: 100%; }
 body { margin: 0; 
     font-family: 'Lato', sans-serif;
-    color: #47525E;
+    color: #3c4248;
+    background-color: white;
 }
 
 .generic-card {
@@ -16,3 +17,4 @@ body { margin: 0;
     border-radius: 6px;
     margin-top: 8%;
 }
+
