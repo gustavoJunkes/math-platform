@@ -34,6 +34,10 @@ export class CompoundInterestComponent implements OnInit {
     })    
   }
 
+  copy(value: number) {
+    navigator.clipboard.writeText(value+"");
+  }
+
   calculate(form: FormGroup) {
     var initialValue = Number(form.controls['Valor inicial'].value);
     var interestValue = Number(form.controls['Valor dos juros'].value);

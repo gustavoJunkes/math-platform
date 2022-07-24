@@ -3,23 +3,23 @@
 <h1 class="page-title">Porcentagem</h1>
 
 <app-card-calculation [form]="formPercentage1" [title]="'Quantos % um valor representa de outro'" (resultObject)="calculatePercentage1($event)"> </app-card-calculation>
-<div class="result-div">
-    <p>Resultado: {{calculationResult1}}%</p>
+<div class="result-div" *ngIf="calculationResult1">
+    <p>Resultado: {{calculationResult1}}%</p> <button class="copy-button" (click)="copy(calculationResult4)">Copiar</button>
 </div>
 
 <app-card-calculation [form]="formPercentage2" [title]="'Quanto é x% de y'" (resultObject)="calculatePercentage2($event)"> </app-card-calculation>
-<div class="result-div">
-    <p>Resultado: {{calculationResult2}}</p>
+<div class="result-div" *ngIf="calculationResult2">
+    <p>Resultado: {{calculationResult2}}</p> <button class="copy-button" (click)="copy(calculationResult4)">Copiar</button>
 </div>
 
 <app-card-calculation [form]="formPercentage3" [title]="'Aumento percentual'" (resultObject)="calculatePercentage3($event)"> </app-card-calculation>
-<div class="result-div">
-    <p>Resultado: {{calculationResult3}}%</p>
+<div class="result-div" *ngIf="calculationResult3">
+    <p>Resultado: {{calculationResult3}}%</p> <button class="copy-button" (click)="copy(calculationResult4)">Copiar</button>
 </div>
 
 <app-card-calculation [form]="formPercentage4" [title]="'Diminuição percentual'" (resultObject)="calculatePercentage4($event)"> </app-card-calculation>
-<div class="result-div">
-    <p>Resultado: {{calculationResult4}}%</p>
+<div class="result-div" *ngIf="calculationResult4">
+    <p>Resultado: {{calculationResult4}}%</p> <button class="copy-button" (click)="copy(calculationResult4)">Copiar</button>
 </div>
 
 <app-footer></app-footer>

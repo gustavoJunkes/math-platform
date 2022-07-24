@@ -4,9 +4,9 @@
 
 <app-card-calculation [title]="title" [form]="calculationForm" (resultObject)="calculate($event)"></app-card-calculation>
 
-<div class="result-div" *ngIf="true">
-    <p>Resultado final: {{calculationResult}}</p>
-    <p>Total de juros: {{interestCalculationResult}}</p>
+<div class="result-div" *ngIf="calculationResult">
+    <p>Resultado final: {{calculationResult}} <button class="copy-button" (click)="copy(calculationResult)">Copiar</button></p> 
+    <p>Total de juros: {{interestCalculationResult}} <button class="copy-button" (click)="copy(interestCalculationResult)">Copiar</button></p> 
 </div>
 
 <div id="div-explanation-button">

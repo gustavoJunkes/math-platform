@@ -59,6 +59,10 @@ export class PercentageComponent implements OnInit {
 
   }
 
+  copy(value: number) {
+    navigator.clipboard.writeText(value+"")
+  }
+
   calculatePercentage1(form: FormGroup) {
     let value1 = form.controls["O valor"].value;
     let value2 = form.controls["É qual porcentagem do valor"].value;
