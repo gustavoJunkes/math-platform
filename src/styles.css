@@ -5,7 +5,7 @@ html, body { height: 100%; }
 body { margin: 0; 
     font-family: 'Lato', sans-serif;
     color: #3c4248;
-    background-color: #ebe7e7;
+    background-color: white;
 }
 
 .generic-card {
