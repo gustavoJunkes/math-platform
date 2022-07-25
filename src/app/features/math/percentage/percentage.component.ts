@@ -17,6 +17,8 @@ export class PercentageComponent implements OnInit {
   calculationResult3!: number;
   calculationResult4!: number;
 
+  valueCopied!: Object;
+
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
@@ -60,7 +62,8 @@ export class PercentageComponent implements OnInit {
   }
 
   copy(value: number) {
-    navigator.clipboard.writeText(value+"")
+    navigator.clipboard.writeText(value+"");
+    this.valueCopied = value;
   }
 
   calculatePercentage1(form: FormGroup) {
