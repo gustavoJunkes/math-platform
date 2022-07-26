@@ -7,13 +7,15 @@ import { CompoundInterestComponent } from './compound-interest/compound-interest
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataComponent } from './data/data.component';
 import { PercentageComponent } from './percentage/percentage.component';
+import { FactorialComponent } from './factorial/factorial.component';
 
 
 @NgModule({
   declarations: [
     CompoundInterestComponent,
     DataComponent,
-    PercentageComponent
+    PercentageComponent,
+    FactorialComponent
   ],
   imports: [
     CommonModule,
