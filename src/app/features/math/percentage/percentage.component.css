@@ -47,7 +47,7 @@ div.result-div {
     margin-bottom: 1.5%;
 }
 
-.copy-button {
+.copy-button, i {
     margin-left: 01%;
     margin-top: 1.5%;
     height: 10%;
