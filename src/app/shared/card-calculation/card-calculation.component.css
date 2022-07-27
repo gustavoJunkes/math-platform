@@ -15,6 +15,7 @@
 div.card-title > h1 {
     font-size: 1.5em;
     font-weight: 500;
+    
 }
 
 .card-title {
@@ -93,4 +94,12 @@ div#float-container {
     width: 95%;
     margin: auto;
 }
+}
+
+.one-item-input-container {
+    margin-top: 2%;
+}
+
+.one-item-calculation-button {
+    margin-top: 4.5%;
 }
