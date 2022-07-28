@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataComponent } from './data/data.component';
 import { PercentageComponent } from './percentage/percentage.component';
 import { FactorialComponent } from './factorial/factorial.component';
+import { MdcComponent } from './mdc/mdc.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FactorialComponent } from './factorial/factorial.component';
     CompoundInterestComponent,
     DataComponent,
     PercentageComponent,
-    FactorialComponent
+    FactorialComponent,
+    MdcComponent
   ],
   imports: [
     CommonModule,
