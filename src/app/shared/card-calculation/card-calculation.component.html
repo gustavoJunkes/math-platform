@@ -4,20 +4,15 @@
     </div>
     <form [formGroup]="form">
         <div id="float-container" >
-            <div class="input-container" *ngFor="let value of keys">
+            <div [ngClass]="keys.length == 1 ? 'one-item-input-container' : ''" class="input-container" *ngFor="let value of keys">
                 <label for="{{value}}">{{value}}</label>
                 <br>
                 <input type="number" class="input-field" id="{{value}}" formControlName="{{value}}">
             </div>
         </div>    
         
-        <button class="calculate-button little-button" (click)="calculate(form)">Calcular</button>
+        
+        <button [ngClass]="keys.length == 1 ? 'one-item-calculation-button' : ''" class="calculate-button little-button" (click)="calculate(form)">Calcular</button>
     </form>
     
-</div>
-
-
-<div class="result-div" *ngIf="calculationResult">
-   <p>Resultado final: {{calculationResult}}</p>
-   <p>Total de juros: {{interestCalculationResult}}</p>
 </div>

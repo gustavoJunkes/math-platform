@@ -25,4 +25,8 @@ export class HeaderComponent implements OnInit {
   redirectToPercentage() {
     this.router.navigate(['matematica/porcentagem'])
   }
+
+  redirectToFactorial() {
+    this.router.navigate(['matematica/fatorial'])
+  }
 }

@@ -1,3 +1,4 @@
+import { FactorialComponent } from './factorial/factorial.component';
 import { PercentageComponent } from './percentage/percentage.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: "porcentagem",
     component: PercentageComponent
+  },
+  {
+    path: "fatorial",
+    component: FactorialComponent
   }
 ];
 

@@ -1,20 +1,43 @@
 <app-header></app-header>
 
-<app-card-calculation [title]="title" [form]="calculationForm" (resultObject)="calculate($event)"></app-card-calculation>
+<h1 class="page-title">Cálculo de juros</h1>
+
+<app-card-calculation [title]="'Juros compostos'" [form]="calculationForm1" (resultObject)="calculate1($event)"></app-card-calculation>
+
+<div class="result-div" *ngIf="calculationResult1">
+    <p>Resultado final: {{calculationResult1}} <button class="copy-button" (click)="copy(calculationResult1)">Copiar</button></p> 
+    <p>Total de juros: {{interestCalculationResult1}} <button class="copy-button" (click)="copy(interestCalculationResult1)">Copiar</button></p> 
+</div>
 
 <div id="div-explanation-button">
     <div class="explanation-card" *ngIf="showExplanation" >
         <h2>Como funciona o cálculo de juros compostos</h2>
-        <p> O cálculo de juros compostos consiste em somar o montante inicial com o valor dos juros e aplicação definidos para cada período,
-             de forma que os juros dos períodos seguintes serão calculados a partir da soma dos juros dos períodos anteriores. O resultado pode ser extraído através da seguinte fórmula:</p>
-    
-        <p>
-            Consiste em uma soma composta, em que para cada período é adicionado ao montante o aporte por período e os juros sobre o montante, de forma que no próximo período os juros sejam calculados levando em consideração os juros adicionados ao último período.
-    
-        </p>    
+        <p> O cálculo de juros compostos é aquele em que a taxa de juros, predefinida ou não, atua sobre o montante a cada período. 
+            Isso significa que os juros do segundo período serão calculados sobre o valor total, incluindo o valor dos juros acumulado 
+            dos períodos anteriores. Isso representa um crescimento exponencial do montante, o que é favorável para investimentos, mas indesejável para dívidas.
+        </p>
+        
     </div>
     <button (click)="changeShowExplanation()"  class="show-explanation-button">Mostrar Explicação</button>    
 </div>
 
+<app-card-calculation [title]="'Juros simples'" [form]="calculationForm2" (resultObject)="calculate2($event)"></app-card-calculation>
+<div class="result-div" *ngIf="calculationResult2">
+    <p>Resultado final: {{calculationResult2}} <button class="copy-button" (click)="copy(calculationResult1)">Copiar</button></p> 
+    <p>Total de juros: {{interestCalculationResult2}} <button class="copy-button" (click)="copy(interestCalculationResult2)">Copiar</button></p> 
+</div>
+<div id="div-explanation-button">
+    <div class="explanation-card" *ngIf="showExplanation" >
+        <h2>Como funciona o cálculo de juros Simples</h2>
+        <p>O cálculo de juros simples é aquele em que a taxa de juros, um valor predefinido, só atua sobre o valor inicial. 
+            A fórmula que usamos para calcular juros simples é:
+        </p>    
+        <p>
+            valor final = valor inicial + juros sobre valor inicial + valor por período * número de períodos
+        </p>
+         
+    </div>
+    <button (click)="changeShowExplanation()"  class="show-explanation-button">Mostrar Explicação</button>    
+</div>
 
 <app-footer></app-footer>

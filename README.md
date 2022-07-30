@@ -1,48 +1,56 @@
 # math-platform
 
-> - Acesse o [ambiente de produção](http://math-platform.com.br/matematica/juros)
+> - Acesse o [ambiente de produção](http://math-platform.com.br)
+
+## Sobre o projeto
+
+O projeto se baseia em um facilitador para cálculos simples, como porcentagem e juros, para ser usado em cálculos do dia a dia.
+
+## Por que?
+
+Desenvolvi este projeto para ser parte do meu portfólio pessoal e para que possa aprender com ele. Portanto, sou grato se você puder fornecer um feedback sobre o projeto, seja sobre o código, sobre a ideia, o design ou qualquer informação que você acredite que possa ajudar. Aqui estão algumas formas de contato:
+
+- Conecte-se comigo no [Linkedin](https://www.linkedin.com/in/gustavo-junkes-545797214/)
+- Me mande um [email](gujunkes50@gmail.com)
+
 
 ## Funcionalidades
-- Cadastro de novas formulas para resolução de outros problemas. Dessa forma, a própria comunidade pode contribuir adicionando mais fórmulas para resolver mais contas 
-- Login
-- Cadastro de usuários
-- Resolução de equações algébricas simples (14 = 10 + 2x - 5)
 
-## Especificações funcionais:
-- O sistema deve comportar o cadastro de novas fórmulas e cálculos matemáticos. Por exemplo, deve ser possível cadastrar a fórmula de bhaskara, e através dessa formula pronta, conseguir resolver qualquer conta com esta formula, como passar os valores das váriaveis, encontrar o valor de uma diferente variável da fórmula (i.e e = mc²)
-- Deve ser possível, como no caso da bhaskara, passar como parâmetro uma equação de segundo grau e resolver a mesma, entregando seu resultado.
-- O sistema deve fazer papel de uma calculadora, reconhecendo imputs como / (dividido)
-- Utilizar fórmulas cadastradas para resolver problemas matemáticos. Exemplo, a área de um triângulo, passando um problema e utilizando a fórmula cadastrada a = (b*h)/2 para dar a resposta
-## Trabalhos futuros
-- Mostrar a resolução da fórmula, os cálculos que levaram aquele resultado
-- Receber um problema, extrair seus dados e trazer o resultado
-- Receber um problema e identificar qual cálculo mais adequado para sua resolução
+Até o momento, o projeto conta com as seguintes funcionalidades:
 
+- Cálculo de datas
+  - Diferença de dias entre duas datas
+- Cálculo de juros
+  - Cálculo de juros compostos
+- Cálculo de porcentagem
+  - Porcentagem que um valor representa de outro
+  - Descobrir valor de uma porcentagem
+  - Aumento percentual
+  - Diminuição percentual
 
-# MathPlatformFrontend
+## Especificações técnicas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+O projeto é desenvolvido em Angular, usando a menor quantidade possível de bibliotecas externas.
 
-## Development server
+Versão do [node](https://github.com/nodejs/node): 16.14.0 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Versão do [Angular CLI](https://github.com/angular/angular-cli): 13.2.5
 
-## Code scaffolding
+## Getting started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para rodar o projeto localmente, siga os seguintes passos: basta cloná-lo, abrir o projeto em seu terminal de preferência e 
 
-## Build
+1 - **Clonando o projeto**
+``` git clone https://github.com/gustavoJunkes/math-platform.git ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2 - **Instalando dependências**
+```npm install```
 
-## Running unit tests
+3 - **Rodando o projeto**
+``` npm start ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Abra o navegador em http://localhost:4200/
 
-## Running end-to-end tests
+### Deploy
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Este projeto está hospedado em um bucket S3 da AWS, e ficará disponível até abril de 2023.
