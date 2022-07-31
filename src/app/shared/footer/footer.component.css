@@ -1,10 +1,11 @@
-#footer-div {
+#footer {
     background-color: #001f6c;
     width: 100%;
     height: 18%;
     margin-top: 5%;
     color: white;
     padding-top: 3%;
+    margin-bottom: 0%;
 }
 
 #author-div {
@@ -14,4 +15,10 @@
 a {
     text-decoration: none;
     color: white;
+}
+
+@media(max-width: 1200px) {
+    #footer {
+        margin-top: 18%;
+    }
 }

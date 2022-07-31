@@ -1,5 +1,7 @@
 <app-header></app-header>
 
+<h1 class="page-title">Fatorial</h1>
+
 <app-card-calculation [form]="calculationForm1" [title]="'Cálculo de número fatorial'" (resultObject)="calculate1($event)"></app-card-calculation>
 <div class="result-div" *ngIf="calculationResult1">
     <p>Resultado: {{calculationResult1}}</p> <button class="copy-button" (click)="copy(calculationResult1)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult1">check</i>
