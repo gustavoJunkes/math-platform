@@ -15,6 +15,10 @@ const routes: Routes = [
   {
     path: "calculation",
     loadChildren: async () => import('./math/math.module').then((m) => m.MathModule)
+  },
+  {
+    path: "legal",
+    loadChildren: async () => import('./legal/legal.module').then((m) => m.LegalModule)
   }
 ];
 
