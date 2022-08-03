@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-compound-interest',
@@ -21,7 +22,7 @@ export class CompoundInterestComponent implements OnInit {
   resultObject!: any;
   title: string = "Cálculo de Juros"
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private titleService: Title) { }
   
 
   ngOnInit(): void {
@@ -54,6 +55,7 @@ export class CompoundInterestComponent implements OnInit {
         Validators.required
       ])
     })    
+    this.titleService.setTitle("Cálculo de juros simples e composto");
   }
 
   copy(value: Object) {

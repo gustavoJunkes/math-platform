@@ -1,5 +1,6 @@
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-factorial',
@@ -14,7 +15,7 @@ export class FactorialComponent implements OnInit {
 
   valueCopied!: Object;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private titleService: Title) { }
 
   ngOnInit(): void {
   this.calculationForm1 = this.formBuilder.group({
@@ -22,6 +23,7 @@ export class FactorialComponent implements OnInit {
       Validators.required
     ])
   })
+  this.titleService.setTitle("Cálculo de fatorial");
   }
 
   copy(value: number) {
