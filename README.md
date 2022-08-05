@@ -39,7 +39,7 @@ Versão do [Angular CLI](https://github.com/angular/angular-cli): 13.2.5
 
 ## Getting started
 
-Para rodar o projeto localmente, siga os seguintes passos: basta cloná-lo, abrir o projeto em seu terminal de preferência e 
+Para rodar o projeto localmente, siga os seguintes passos: 
 
 1 - **Clonando o projeto**
 ``` git clone https://github.com/gustavoJunkes/math-platform.git ```
