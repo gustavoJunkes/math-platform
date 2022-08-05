@@ -26,7 +26,8 @@ Até o momento, o projeto conta com as seguintes funcionalidades:
   - Porcentagem que um valor representa de outro
   - Descobrir valor de uma porcentagem
   - Aumento percentual
-  - Diminuição percentual
+  - Diminuição percentual  
+- Cálculo de número fatorial
 
 ## Especificações técnicas
 
@@ -54,5 +55,3 @@ Abra o navegador em http://localhost:4200/
 ### Deploy
 
 Este projeto utiliza o serviço AWS S3 para deploy de código, routing 53 para gestão de domínio e CloudFront e AWS Certificate Manager para acesso via HTTPS.
-
-e ficará disponível até abril de 2023.
