@@ -53,4 +53,6 @@ Abra o navegador em http://localhost:4200/
 
 ### Deploy
 
-Este projeto está hospedado em um bucket S3 da AWS, e ficará disponível até abril de 2023.
+Este projeto utiliza o serviço AWS S3 para deploy de código, routing 53 para gestão de domínio e CloudFront e AWS Certificate Manager para acesso via HTTPS.
+
+e ficará disponível até abril de 2023.
