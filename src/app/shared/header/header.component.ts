@@ -8,9 +8,12 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+  showLegalOptions: boolean = false;
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    
   }
 
   redirectToDate() {
@@ -28,5 +31,9 @@ export class HeaderComponent implements OnInit {
 
   redirectToFactorial() {
     this.router.navigate(['matematica/fatorial'])
+  }
+
+  redirectToPrivacyPolicy() {
+    this.router.navigate(['legal/politica-de-privacidade']);
   }
 }
