@@ -1,13 +1,13 @@
-#header { 
+#header {
     width: 100%;
-    height: 23%;   
+    height: 23%;
     background-color: #3a3cff;
-    color: white; 
+    color: white;
     box-sizing: border-box;
     align-items: center;
     position: relative;
     align-items: center;
-    
+
 }
 
 #title {
@@ -15,7 +15,7 @@
     text-align: center;
     position: absolute;
     margin-left: 21.5%;
-    margin-top: 5%;    
+    margin-top: 5%;
     font-size: 20em;
 }
 
@@ -52,6 +52,7 @@ p {
         margin-left: 15%;
         margin-top: 20%;
     }
+
     div#main-div-links div {
         justify-content: space-around;
         width: 100%;
@@ -64,10 +65,12 @@ p {
         margin-left: 15%;
         margin-top: 20%;
     }
+
     div#main-div-links div {
         justify-content: space-between;
         width: 100%;
         font-size: 0.9em;
     }
 
-}    
+}
+
