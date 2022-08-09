@@ -36,4 +36,9 @@ export class HeaderComponent implements OnInit {
   redirectToPrivacyPolicy() {
     this.router.navigate(['legal/politica-de-privacidade']);
   }
+
+  redirectToUseTerms() {
+    this.router.navigate(['legal/termos-de-uso']);
+  }
+  
 }
