@@ -18,7 +18,7 @@ export class CompoundInterestComponent implements OnInit {
   interestCalculationResult1!: number;
   interestCalculationResult2!: number;
 
-  showExplanation: boolean = false;
+  showExplanation: boolean = true;
   resultObject!: any;
   title: string = "Cálculo de Juros"
 
