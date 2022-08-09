@@ -1,0 +1,8 @@
+.div-text-content {
+    width: 80%;
+    margin: auto;
+    font-size: 1.7em; 
+    /*espaçamento de linhas*/  
+    line-height: 140%;
+    margin-top: 6%;
+}
