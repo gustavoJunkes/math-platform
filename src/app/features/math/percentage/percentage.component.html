@@ -9,7 +9,7 @@
     <p>Resultado: {{calculationResult1}}%</p> <button class="copy-button" (click)="copy(calculationResult1)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult1">check</i>
 </div>
 
-<div id="div-explanation-button">
+<div class="div-explanation-button">
     <div class="explanation-card" *ngIf="showExplanation01" >
         <h2>Como calcular quantos % um valor representa de outro</h2>
         <p>A calculadora acima é capaz de realizar este cálculo. A seguir veremos como o cálculo funciona.</p>
@@ -37,7 +37,7 @@
     <p>Resultado: {{calculationResult2}}</p> <button class="copy-button" (click)="copy(calculationResult2)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult2">check</i>
 </div>
 
-<div id="div-explanation-button">
+<div class="div-explanation-button">
     <div class="explanation-card" *ngIf="showExplanation02" >
         <h2>Como calcular a porcentagem de um valor</h2>
         <p>A calculadora acima é capaz de realizar este cálculo. A seguir veremos como o cálculo funciona.</p>
@@ -71,6 +71,44 @@
 <app-card-calculation [form]="formPercentage3" [title]="'Aumento percentual'" (resultObject)="calculatePercentage3($event)"> </app-card-calculation>
 <div class="result-div" *ngIf="calculationResult3">
     <p>Resultado: {{calculationResult3}}%</p> <button class="copy-button" (click)="copy(calculationResult3)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult3">check</i>
+</div>
+<div class="div-explanation-button">
+    <div class="explanation-card" *ngIf="showExplanation03" >
+        <h2>Como calcular aumento percentual</h2>
+        <p>A calculadora acima é capaz de realizar este cálculo. A seguir veremos como o cálculo funciona.</p>
+        <p>
+            O aumento percentual se trata do aumento, em porcentagem, que um valor obteve em determinado período. 
+            Com isso em mente, sabemos que para calcular o percentual de aumento precisamos antes calcular o aumento, 
+            para em seguida descobrir quanto esse valor representa percentualmente do valor inicial.            
+        </p>   
+        <p>
+            Exemplo: temos que o valor 25 subiu para 30.
+        </p>
+        <ul>
+            <li>Primeiro, calculamos a diferença de valores: 30 - 25 = 5 </li>
+            <li>
+                Agora que sabemos quanto o valor aumentou, temos que descobrir qual valor percentual o aumento representa do total, utilizando o mesmo cálculo de percentual mostrado acima: 
+                <ul>
+                    <li>5 ÷ 25 = 0,2</li>
+                    <li>0,2 x 100 = 20</li>
+                </ul>
+            </li>
+            <li>O aumento percentual foi de 20%.</li>
+        </ul>
+        <p>
+            Logo, seguindo esta mesma lógica, para descobrir quantos por cento um valor representa de outro, basta seguir os seguintes passos:
+        </p>
+        <ol>
+            <li>Subtrair o segundo valor pelo primeiro. Exemplo: 15 - 10 = 5</li>
+            <li>Em seguida, dividimos este resultado pelo primeiro valor. Exemplo: 5 ÷ 10 = 0,5</li>
+            <li>Finalmente, multiplicamos este resultado por 100. Exemplo: 0,5 x 100 = 50</li>
+        </ol> 
+        <p>
+           Pronto, pudemos observar que o valor 10, que aumentou para 15, teve um aumento de 50%.
+        </p>
+         
+    </div>
+    <button (click)="showExplanation03 = !showExplanation03"  class="show-explanation-button">Mostrar Explicação</button>    
 </div>
 
 
