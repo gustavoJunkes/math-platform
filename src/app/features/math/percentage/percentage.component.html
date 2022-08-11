@@ -2,9 +2,34 @@
 
 <h1 class="page-title">Porcentagem</h1>
 
+<h2 class="page-subtitle">Calculadora de porcentagem</h2>
+
 <app-card-calculation [form]="formPercentage1" [title]="'Quantos % um valor representa de outro'" (resultObject)="calculatePercentage1($event)"> </app-card-calculation>
 <div class="result-div" *ngIf="calculationResult1">
     <p>Resultado: {{calculationResult1}}%</p> <button class="copy-button" (click)="copy(calculationResult1)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult1">check</i>
+</div>
+
+<div id="div-explanation-button">
+    <div class="explanation-card" *ngIf="showExplanation01" >
+        <h2>Como calcular quantos % um valor representa de outro</h2>
+        <p>A calculadora acima é capaz de realizar este cálculo. A seguir veremos como o cálculo funciona.</p>
+        <p>
+            Quando falamos em porcentagem, falamos de um valor dividido por 100. Com isso em mente, quando falamos que 20 é 10% de 200,
+            estamos basicamente dizendo que 10 dividido 100, multiplacado por 200, é igual a 20.
+        </p>   
+        <p>
+            Logo, seguindo esta mesma lógica, para descobrir quantos por cento um valor representa de outro, basta seguir os seguintes passos:
+        </p>
+        <ol>
+            <li>Divida o primeiro valor pelo segundo. Por exemplo, 15 ÷ 150 = 0,1.</li>
+            <li>Em seguida, basta multiplicar o resultado obtido por 100. Por exemplo, 0,1 x 100 = 10.</li>
+        </ol> 
+        <p>
+           Pronto, agora sabemos que o valor 15 representa 10% de 150.
+        </p>
+         
+    </div>
+    <button (click)="showExplanation01 = !showExplanation01"  class="show-explanation-button">Mostrar Explicação</button>    
 </div>
 
 <app-card-calculation [form]="formPercentage2" [title]="'Quanto é x% de y'" (resultObject)="calculatePercentage2($event)"> </app-card-calculation>
