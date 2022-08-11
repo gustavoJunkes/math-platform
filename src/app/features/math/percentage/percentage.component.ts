@@ -18,6 +18,9 @@ export class PercentageComponent implements OnInit {
   calculationResult3!: number;
   calculationResult4!: number;
 
+  showExplanation01: boolean = true;
+  showExplanation02: boolean = true;
+
   valueCopied!: Object;
 
   constructor(private formBuilder: FormBuilder,  private titleService: Title) { }

@@ -36,7 +36,7 @@
     <button (click)="changeShowExplanation()"  class="show-explanation-button">Mostrar Explicação</button>    
 </div>
 
-<app-card-calculation [title]="'calculadora de juros simples'" [form]="calculationForm2" (resultObject)="calculate2($event)"></app-card-calculation>
+<app-card-calculation [title]="'Calculadora de juros simples'" [form]="calculationForm2" (resultObject)="calculate2($event)"></app-card-calculation>
 <div class="result-div" *ngIf="calculationResult2">
     <p>Resultado final: {{calculationResult2}} <button class="copy-button" (click)="copy(calculationResult1)">Copiar</button></p> 
     <p>Total de juros: {{interestCalculationResult2}} <button class="copy-button" (click)="copy(interestCalculationResult2)">Copiar</button></p> 
