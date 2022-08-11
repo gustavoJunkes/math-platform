@@ -37,10 +37,43 @@
     <p>Resultado: {{calculationResult2}}</p> <button class="copy-button" (click)="copy(calculationResult2)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult2">check</i>
 </div>
 
+<div id="div-explanation-button">
+    <div class="explanation-card" *ngIf="showExplanation02" >
+        <h2>Como calcular a porcentagem de um valor</h2>
+        <p>A calculadora acima é capaz de realizar este cálculo. A seguir veremos como o cálculo funciona.</p>
+        <p>
+            Quando falamos em porcentagem, falamos de um valor dividido por 100. Com isso em mente, quando falamos que 10% de 200 é 20,
+            estamos basicamente dizendo que 10 dividido por 100, multiplacado por 200, é igual a 20. 
+        </p>   
+        <p>
+            Exemplo:
+        </p>
+        <ul>
+            <li>10 ÷ 100 = 0,1 </li>
+            <li>0,1 x 200 = 20</li>
+            <li>10% de 200 é igual a 20</li>
+        </ul>
+        <p>
+            Logo, seguindo esta mesma lógica, para descobrir quantos por cento um valor representa de outro, basta seguir os seguintes passos:
+        </p>
+        <ol>
+            <li>Dividir o primeiro valor por 100 (afinal, falamos em 10 por cento, logo 10 / 100).</li>
+            <li>Em seguida, basta multiplicar o resultado obtido pelo valor total.</li>
+        </ol> 
+        <p>
+           Pronto, agora sabemos que o valor 20 representa 10% de 200.
+        </p>
+         
+    </div>
+    <button (click)="showExplanation02 = !showExplanation02"  class="show-explanation-button">Mostrar Explicação</button>    
+</div>
+
 <app-card-calculation [form]="formPercentage3" [title]="'Aumento percentual'" (resultObject)="calculatePercentage3($event)"> </app-card-calculation>
 <div class="result-div" *ngIf="calculationResult3">
     <p>Resultado: {{calculationResult3}}%</p> <button class="copy-button" (click)="copy(calculationResult3)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult3">check</i>
 </div>
+
+
 
 <app-card-calculation [form]="formPercentage4" [title]="'Diminuição percentual'" (resultObject)="calculatePercentage4($event)"> </app-card-calculation>
 <div class="result-div" *ngIf="calculationResult4">
