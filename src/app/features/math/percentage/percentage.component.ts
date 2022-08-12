@@ -103,7 +103,7 @@ export class PercentageComponent implements OnInit {
     let value1 = form.controls["O valor"].value;
     let value2 = form.controls['Diminuiu para'].value;
 
-    let result = (value1 - value2) / value2 * 100;
+    let result = (value2 / value1 - 1) * -100;
     this.calculationResult4 = result;
     console.log("O resultado é: " + result + "%")
   }
