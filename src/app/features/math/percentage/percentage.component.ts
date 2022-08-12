@@ -21,7 +21,7 @@ export class PercentageComponent implements OnInit {
   showExplanation01: boolean = true;
   showExplanation02: boolean = true;
   showExplanation03: boolean = true;
-
+  showExplanation04: boolean = true;
 
   valueCopied!: Object;
 
