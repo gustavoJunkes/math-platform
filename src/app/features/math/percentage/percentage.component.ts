@@ -20,6 +20,8 @@ export class PercentageComponent implements OnInit {
 
   showExplanation01: boolean = true;
   showExplanation02: boolean = true;
+  showExplanation03: boolean = true;
+  showExplanation04: boolean = true;
 
   valueCopied!: Object;
 
@@ -101,7 +103,7 @@ export class PercentageComponent implements OnInit {
     let value1 = form.controls["O valor"].value;
     let value2 = form.controls['Diminuiu para'].value;
 
-    let result = (value1 - value2) / value2 * 100;
+    let result = (value2 / value1 - 1) * -100;
     this.calculationResult4 = result;
     console.log("O resultado é: " + result + "%")
   }
