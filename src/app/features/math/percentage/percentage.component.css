@@ -1,15 +1,15 @@
 @media(min-width: 1000px) {
-    .page-title {
-        margin-left: 15%;
-        margin-top: 5%;
-        font-size: 2.5em;
-        font-weight: 500;
-    }
-    .page-subtitle {
-        margin-left: 15%;
-        margin-top: 1%;
-        margin-bottom: 1%;
-    }    
+.page-title {
+    margin-left: 15%;
+    margin-top: 5%;
+    font-size: 2.5em;
+    font-weight: 500;
+}
+.page-subtitle {
+    margin-left: 15%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}    
 }
 
 @media (max-width: 1000px){

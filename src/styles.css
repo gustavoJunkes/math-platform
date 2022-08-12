@@ -10,8 +10,9 @@ html, body {
 }
 body { margin: 0; 
     font-family: 'Lato', sans-serif;
-    color: #3c4248;
-    background-color: white;
+}
+*::selection {
+    background-color: #4b4de18b;
 }
 
 .generic-card {
