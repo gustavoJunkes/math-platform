@@ -9,6 +9,7 @@ import { DataComponent } from './data/data.component';
 import { PercentageComponent } from './percentage/percentage.component';
 import { FactorialComponent } from './factorial/factorial.component';
 import { MdcComponent } from './mdc/mdc.component';
+import { CientificNotationComponent } from './cientific-notation/cientific-notation.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { MdcComponent } from './mdc/mdc.component';
     DataComponent,
     PercentageComponent,
     FactorialComponent,
-    MdcComponent
+    MdcComponent,
+    CientificNotationComponent
   ],
   imports: [
     CommonModule,
