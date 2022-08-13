@@ -1,3 +1,4 @@
+import { CientificNotationComponent } from './cientific-notation/cientific-notation.component';
 import { FactorialComponent } from './factorial/factorial.component';
 import { PercentageComponent } from './percentage/percentage.component';
 import { NgModule } from '@angular/core';
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: "fatorial",
     component: FactorialComponent
+  },
+  {
+    path: "notação-científica",
+    component: CientificNotationComponent
   }
 ];
 
