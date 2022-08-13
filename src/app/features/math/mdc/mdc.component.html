@@ -1,1 +1,8 @@
-<p>mdc works!</p>
+<app-header></app-header>
+
+<app-card-calculation [form]="formMdc" [title]="'MDC'" (resultObject)="calculateMdc($event)"></app-card-calculation>
+<div class="result-div" *ngIf="calculationResult">
+    <p>Resultado: {{calculationResult}}</p> <button class="copy-button" (click)="copy(calculationResult)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult">check</i>
+</div>
+
+<app-footer></app-footer>
