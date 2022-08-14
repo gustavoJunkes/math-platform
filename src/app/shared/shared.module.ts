@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { CardCalculationComponent } from './card-calculation/card-calculation.component';
+import { CalculationPostComponent } from './calculation-post/calculation-post.component';
 
 
 
@@ -12,7 +13,8 @@ import { CardCalculationComponent } from './card-calculation/card-calculation.co
   declarations: [
     HeaderComponent,
     CardCalculationComponent,
-    FooterComponent
+    FooterComponent,
+    CalculationPostComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { CardCalculationComponent } from './card-calculation/card-calculation.co
   exports: [
     HeaderComponent,
     CardCalculationComponent,
-    FooterComponent
+    FooterComponent,
+    CalculationPostComponent
   ]
 })
 export class SharedModule { }
