@@ -1,24 +1,51 @@
 <app-header></app-header>
 
 <h1 class="page-title">Cadastro de fórmulas</h1>
+
 <div class="generic-card " id="variables-card" >
     <h2 class="card-title">Variáveis</h2>
     <br>
-    <div id="variables-div">
-        <div class="variable-card" *ngFor="let value of variables">{{value.variableName}}</div>
+    <div id="variables-div" *ngIf="formula.variables.length > 0; else other_content">
+        <div class="variable-card" *ngFor="let value of formula.variables">{{value.variableName}}</div>
     </div>    
+    <ng-template #other_content><p>Nenhuma variável cadastrada.</p></ng-template>
+    
 </div>
 
-<div class="generic-card card " id="formula-edit-div">
+
+<div class="generic-card card " id="formula-edit-div" [formGroup]="formulaEditor">
     <h2 class="card-title">Editor de fórmula</h2>
     <br>
     <label for="formula-input">Fórmula:</label>
     <br>
-    <input type="text" id="formula-input" class="text-editor">
+    <input type="text" id="formula-input" class="text-editor" formControlName="editor">
     <br>
-    <input class="save-button" type="button" value="Salvar">
+    <input class="save-button" type="button" value="Salvar" (click)="saveFormula()" >
 </div>
 
+<div class="generic-card card" [formGroup]="variableEditor">
+    <h2 class="card-title">Cadastrar variável</h2>
+    <label for="formula-input">Variável:</label>
+    <br>
+    <input type="text" id="formula-input" class="text-editor" formControlName="variable">
+    <br>
+    <input class="save-button" type="button" value="Salvar" (click)="saveVariable()">
+</div>
 
-<div style="height: 500px;"></div>
+<div class="generic-card card" [formGroup]="explanationEditor">
+    <h2 class="card-title">Publicação</h2>
+
+    <label for="title-input">Nome do cálculo:</label>
+    <br>
+    <input type="text" id="title-input" class="text-editor" formControlName="title">
+    <br>
+
+    <label for="explanation-input">Explicação:</label>
+    <br>
+    <textarea id="" cols="30" rows="10" id="explanation-input" class="text-editor" formControlName="explanation"></textarea>
+    <br>
+
+    <input class="save-button" type="button" value="Salvar" (click)="saveVariable()">
+</div>
+
 <app-footer></app-footer>
