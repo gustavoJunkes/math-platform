@@ -1,3 +1,4 @@
+import { SharedModule } from './../../../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -13,7 +14,8 @@ import { MyFormulasComponent } from './my-formulas/my-formulas.component';
   ],
   imports: [
     CommonModule,
-    FormulaRoutingModule
+    FormulaRoutingModule,
+    SharedModule
   ]
 })
 export class FormulaModule { }

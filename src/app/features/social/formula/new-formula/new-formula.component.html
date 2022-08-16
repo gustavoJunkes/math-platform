@@ -1,1 +1,24 @@
-<p>new-formula works!</p>
+<app-header></app-header>
+
+<h1 class="page-title">Cadastro de fórmulas</h1>
+<div class="generic-card " id="variables-card" >
+    <h2 class="card-title">Variáveis</h2>
+    <br>
+    <div id="variables-div">
+        <div class="variable-card" *ngFor="let value of variables">{{value.variableName}}</div>
+    </div>    
+</div>
+
+<div class="generic-card card " id="formula-edit-div">
+    <h2 class="card-title">Editor de fórmula</h2>
+    <br>
+    <label for="formula-input">Fórmula:</label>
+    <br>
+    <input type="text" id="formula-input" class="text-editor">
+    <br>
+    <input class="save-button" type="button" value="Salvar">
+</div>
+
+
+<div style="height: 500px;"></div>
+<app-footer></app-footer>
