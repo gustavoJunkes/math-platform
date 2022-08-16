@@ -1,9 +1,8 @@
 <app-header></app-header>
+<h1 class="page-title">Cálculos da comunidade</h1>
 
-<h1 class="page-title">Comunidade</h1>
-
-
-<div style="min-height: 45%;">
-
+<div class="content-div" *ngFor="let post of posts">
+    <app-calculation-post [post]="post"></app-calculation-post>
 </div>
+
 <app-footer></app-footer>
