@@ -1,3 +1,4 @@
+import { PostService } from './../../../../core/services/post.service';
 import { Post } from './../../../../core/model/post.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
@@ -18,7 +19,8 @@ export class NewFormulaComponent implements OnInit, OnChanges {
   variableEditor!: FormGroup;
   explanationEditor!: FormGroup;
   post!: Post;
-  constructor(private formBuilder: FormBuilder) { }
+
+  constructor(private formBuilder: FormBuilder, private postService: PostService) { }
 
   ngOnInit(): void {    
     this.formula = new Formula("", "", []);
@@ -62,12 +64,27 @@ export class NewFormulaComponent implements OnInit, OnChanges {
   }
 
   saveExplanation() {
+    console.log(this.explanationEditor.controls['explanation'].value)
+    console.log(this.explanationEditor.controls['title'].value)
     this.formula.explanation = this.explanationEditor.controls['explanation'].value;
     this.post.title = this.explanationEditor.controls['title'].value;
   }
 
   postFormula() {
     // aqui dar sequencia para o post. 
-    this.post.formula = this.formula;
+    if(this.formsValid()){
+      this.post.formula = this.formula;
+      this.postService.save(this.post).subscribe((post) => {
+      this.post = post;
+      console.log("Post salvo: " + post)
+    });
+    } else {
+      console.error("inconformidade nos forms")
+    }
+    
+  }
+
+  formsValid(): boolean {
+    return this.formulaEditor.valid && this.explanationEditor.valid;
   }
 }

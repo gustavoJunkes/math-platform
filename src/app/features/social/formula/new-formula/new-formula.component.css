@@ -87,3 +87,13 @@ div > label{
 #title-input {
     margin-bottom: 2%;
 }
+
+#post-button {
+    margin-left: 15%;
+    height: 1.5cm;
+    font-size: 1.8em;
+}
+
+#post-button:hover {
+    background-color: #595b5e;
+}
