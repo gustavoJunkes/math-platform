@@ -20,7 +20,7 @@ export class CalculationPostComponent implements OnInit {
 
   clickUseFormula(post: Post) {
     // esse router deve mandar pra tela de cálculo usando uma fórmula
-    this.router.navigate([''])
+    this.router.navigate(['social/formula/nova-formula'])
   }
 
 }
