@@ -1,6 +1,7 @@
 import { Formula } from "./formula.model";
 
 export class Post {
+    id!: string;
     title!: string;
     date!: string;
     formula!: Formula;
