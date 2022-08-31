@@ -1,6 +1,7 @@
 import { Variable } from "./variable.model";
 
 export class Formula{
+    id!: string;
     formulaString!: string;
     explanation!: string;
     variables!: Variable[];
