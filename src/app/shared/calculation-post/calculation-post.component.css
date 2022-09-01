@@ -1,0 +1,24 @@
+.post-div {
+    border-width: 0.2px;
+    border-radius: 0%;
+    border-style: solid;
+    border-color: #47525E;
+    width: 70%;
+    height: fit-content;
+    margin: auto;
+    margin-bottom: 5%;
+    margin-top: 2%;
+    padding: 2%;
+    border-radius: 0.2cm;
+    box-sizing: border-box;
+}
+
+.use-button {
+    width: 25%;
+    height: 1.2cm;
+    background-color: #47525E;
+    color: white;
+    border-radius: 7px;
+    border-color: #47525E;
+    font-size: large;
+}

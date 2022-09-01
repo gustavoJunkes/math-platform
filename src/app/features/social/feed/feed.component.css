@@ -1,0 +1,29 @@
+@media(min-width: 1000px) {
+.page-title {
+    margin-left: 15%;
+    margin-top: 5%;
+    font-size: 2.5em;
+    font-weight: 500;
+}
+}
+
+@media (max-width: 1000px){
+.page-title {
+    margin-left: 3%;
+    margin-top: 5%;
+    font-size: 2em;
+    font-weight: 500;
+}
+}
+
+#new-post-button {
+    background-color: white;
+    border-radius: 7px;
+    font-size: large;
+    width: 14%;
+    height: 1.2cm;
+    border-color: #47525E;
+    margin-left: 15%;
+    margin-top: 1%;
+    cursor: pointer;
+}

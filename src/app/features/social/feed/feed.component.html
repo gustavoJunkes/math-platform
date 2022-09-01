@@ -1,0 +1,9 @@
+<app-header></app-header>
+<h1 class="page-title">Cálculos da comunidade</h1>
+<input id="new-post-button" type="button" value="Compartilhar nova fórmula" (click)="redirectToNewFormula()">
+
+<div class="content-div" *ngFor="let post of posts">
+    <app-calculation-post [post]="post"></app-calculation-post>
+</div>
+
+<app-footer></app-footer>

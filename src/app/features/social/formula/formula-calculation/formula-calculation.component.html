@@ -1,0 +1,20 @@
+<app-header></app-header>
+
+<div class="calculation-card" style="height: 40%;">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div formArrayName="values" id="float-container">
+            <div *ngFor="let value of values.controls; let i = index">
+               <div [formGroupName]="i" class="input-container" id="input-container">
+                <label for="">{{post.formula.variables[i].variableName}}</label> 
+                <br>
+                <input type="text" formControlName="variableValue" class="input-field" >
+               </div>
+            </div>
+        </div>
+    
+        <button type="submit" class="calculate-button">Calcular</button>
+    </form>
+    
+</div>
+
+<app-footer></app-footer>
