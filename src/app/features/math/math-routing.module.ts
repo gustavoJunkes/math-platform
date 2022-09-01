@@ -1,3 +1,5 @@
+import { CientificNotationComponent } from './cientific-notation/cientific-notation.component';
+import { MdcComponent } from './mdc/mdc.component';
 import { FactorialComponent } from './factorial/factorial.component';
 import { PercentageComponent } from './percentage/percentage.component';
 import { NgModule } from '@angular/core';
@@ -9,7 +11,7 @@ import { DataComponent } from './data/data.component';
 const routes: Routes = [
   {
     path: "juros",
-    component: CompoundInterestComponent
+    component: CompoundInterestComponent,
     //loadChildren: async () => import('./compound-interest/compound-interest.component').then((m) => m.CompoundInterestComponent),
   },
   {
@@ -28,6 +30,14 @@ const routes: Routes = [
   {
     path: "fatorial",
     component: FactorialComponent
+  },
+  {
+    path: "notação-científica",
+    component: CientificNotationComponent
+  },
+  {
+    path: "mdc",
+    component: MdcComponent
   }
 ];
 

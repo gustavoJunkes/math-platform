@@ -19,6 +19,10 @@ const routes: Routes = [
   {
     path: "legal",
     loadChildren: async () => import('./legal/legal.module').then((m) => m.LegalModule)
+  },
+  {
+    path: "social",
+    loadChildren: async () => import('./social/social.module').then((m) => m.SocialModule)
   }
 ];
 

@@ -1,0 +1,11 @@
+<div [formGroup]="form">
+    <label [attr.for]="question.key">{{question.label}}</label>
+  
+    <div [ngSwitch]="question.controlType">
+  
+      <input [formControlName]="question.key"
+              [id]="question.key" [type]="question.type">
+    
+    </div>
+  </div>
+  

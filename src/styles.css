@@ -22,6 +22,77 @@ body { margin: 0;
     margin: auto;
     box-sizing: border-box;
     border-radius: 6px;
-    margin-top: 8%;
 }
 
+
+.calculation-card {
+    width: 90%;
+    background-color: #e6e6e6;
+    height: fit-content;
+    margin: auto;
+    margin-top: 2%;
+    padding: 0.5%;
+    padding-left: 5%;
+    box-sizing: border-box;
+    padding-bottom: 1%;
+    font-size: 3ch;
+    border-radius: 6px;
+}
+
+.input-field {
+    width: 90%;
+    height: 1.01cm;
+    border-radius: 3px;
+    border-width: 0.5px;
+    border-color: #47525E;
+    border-style: solid;
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    font-size: 0.9em;
+    padding-left: 3%;
+}
+
+@media (min-width: 1000px){ 
+    .input-container {
+        float: left;
+        width: 50%;
+        margin-top: 6%;
+        flex-direction: column;
+    }
+    .input-container input {
+        width: 50%;
+    }
+
+    div.calculation-card {
+        width: 70%;
+    }
+
+    .calculate-button {
+        margin: 2%;
+        margin-top: 5%;
+        margin-left: 0;
+        width: 25%;
+        height: 1.2cm;
+        background-color: #47525E;
+        color: white;
+        border-radius: 7px;
+        border-color: #47525E;
+        font-size: large;
+    }
+}
+
+@media (max-width: 1000px){
+    form button {
+        width: 85%;
+        height: 1.2cm;
+        background-color: #47525E;
+        color: white;
+        border-radius: 7px;
+        border-color: #47525E;
+        font-size: large;
+        margin-left: 5%;
+        margin-top: 0%;
+        margin-bottom: 4%;
+    }
+}

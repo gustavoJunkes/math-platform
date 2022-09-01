@@ -33,6 +33,10 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['matematica/fatorial'])
   }
 
+  redirectToFeed() {
+    this.router.navigate(['social/feed']);
+  }
+
   redirectToPrivacyPolicy() {
     this.router.navigate(['legal/politica-de-privacidade']);
   }

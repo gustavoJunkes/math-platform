@@ -5,6 +5,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { CardCalculationComponent } from './card-calculation/card-calculation.component';
+import { CalculationPostComponent } from './calculation-post/calculation-post.component';
+import { DynamicFormQuestionComponent } from './dynamic-form-question/dynamic-form-question.component';
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 
 
 
@@ -12,7 +15,10 @@ import { CardCalculationComponent } from './card-calculation/card-calculation.co
   declarations: [
     HeaderComponent,
     CardCalculationComponent,
-    FooterComponent
+    FooterComponent,
+    CalculationPostComponent,
+    DynamicFormQuestionComponent,
+    DynamicFormComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +28,9 @@ import { CardCalculationComponent } from './card-calculation/card-calculation.co
   exports: [
     HeaderComponent,
     CardCalculationComponent,
-    FooterComponent
+    FooterComponent,
+    CalculationPostComponent,
+    DynamicFormComponent
   ]
 })
 export class SharedModule { }
