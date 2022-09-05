@@ -17,4 +17,15 @@
     
 </div>
 
+<div class="result-div" *ngIf="calculationResult">
+    <p>Resultado: {{calculationResult}}</p> <button class="copy-button" (click)="copy(calculationResult)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult">check</i>
+</div>
+
+<div class="explanation-card" *ngIf="showExplanation">
+    <p>
+        {{post.formula.explanation}}
+    </p>
+</div>
+<button (click)="showExplanation = !showExplanation"  class="show-explanation-button">Mostrar Explicação</button>
+
 <app-footer></app-footer>
