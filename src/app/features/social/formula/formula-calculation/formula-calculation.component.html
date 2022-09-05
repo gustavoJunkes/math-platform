@@ -1,6 +1,10 @@
 <app-header></app-header>
 
+<h1 class="page-title">{{post.title}}</h1>
+<small *ngIf="user"><p>Postado por {{user.nickname}}, {{post.date}}</p></small>
+
 <div class="calculation-card" style="height: 40%;">
+    <h1 class="card-title">Variáveis</h1>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <div formArrayName="values" id="float-container">
             <div *ngFor="let value of values.controls; let i = index">
