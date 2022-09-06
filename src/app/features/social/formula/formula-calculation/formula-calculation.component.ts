@@ -19,6 +19,11 @@ export class FormulaCalculationComponent implements OnInit {
   post!: Post;
   questions!: QuestionBase<any>[];
   form!: FormGroup;
+  calculationResult!: number;
+  valueCopied!: number;
+  user!: User;
+  showExplanation: Boolean = false;
+  
   // todo: buscar questions do questionservice, e passar estas para o dynamic form
 
   constructor(
