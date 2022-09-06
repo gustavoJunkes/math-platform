@@ -1,3 +1,4 @@
+import { User } from './../../../../core/model/user.model';
 import { Variable } from './../../../../core/model/variable.model';
 import { FormulaService } from './../../../../core/services/formula.service';
 import { PostService } from './../../../../core/services/post.service';
@@ -24,6 +25,7 @@ export class FormulaCalculationComponent implements OnInit {
   user!: User;
   showExplanation: Boolean = false;
   
+  
   // todo: buscar questions do questionservice, e passar estas para o dynamic form
 
   constructor(
@@ -31,8 +33,8 @@ export class FormulaCalculationComponent implements OnInit {
     private questionService: QuestionService, 
     private postService: PostService, 
     private activatedRoute: ActivatedRoute,
-    private formulaService: FormulaService
-    ) { }
+    private formulaService: FormulaService,
+    ) {}
     
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -43,6 +45,13 @@ export class FormulaCalculationComponent implements OnInit {
       this.post = post;
       this.onLoaded();
     }) 
+
+    
+  }
+
+  copy(value: number) {
+    navigator.clipboard.writeText(value+"");
+    this.valueCopied = value;
   }
 
   onLoaded() {
@@ -76,6 +85,7 @@ export class FormulaCalculationComponent implements OnInit {
 
     this.formulaService.calculate(this.post.formula.id, {variables, values}).subscribe(result => {
       console.log(result)
+      this.calculationResult = Number(result);
     })
 
     
