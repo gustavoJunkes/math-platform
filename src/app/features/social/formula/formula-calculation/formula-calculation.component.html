@@ -1,6 +1,10 @@
 <app-header></app-header>
 
+<h1 class="page-title">{{post.title}}</h1>
+<small *ngIf="user"><p>Postado por {{user.nickname}}, {{post.date}}</p></small>
+
 <div class="calculation-card" style="height: 40%;">
+    <h1 class="card-title">Variáveis</h1>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <div formArrayName="values" id="float-container">
             <div *ngFor="let value of values.controls; let i = index">
@@ -16,5 +20,16 @@
     </form>
     
 </div>
+
+<div class="result-div" *ngIf="calculationResult">
+    <p>Resultado: {{calculationResult}}</p> <button class="copy-button" (click)="copy(calculationResult)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult">check</i>
+</div>
+
+<div class="explanation-card" *ngIf="showExplanation">
+    <p>
+        {{post.formula.explanation}}
+    </p>
+</div>
+<button (click)="showExplanation = !showExplanation"  class="show-explanation-button">Mostrar Explicação</button>
 
 <app-footer></app-footer>

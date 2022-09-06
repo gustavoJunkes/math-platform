@@ -21,7 +21,7 @@ export class FormulaService {
   }
 
   calculate(id: string, values: object) {    
-    return this.httpClient.post<String>(`${this.baseUrl}/calculate?formulaId=${id}`, values)
+    return this.httpClient.post<string>(`${this.baseUrl}/calculate?formulaId=${id}`, values)
   }
 
 }
