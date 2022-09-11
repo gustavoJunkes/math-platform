@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 })
 export class PostService {
 
-  baseUrl = 'http://localhost:8080/api';
+  baseUrl = 'https://math-platform.herokuapp.com/api';
 
   constructor(private httpClient: HttpClient) { }
 
