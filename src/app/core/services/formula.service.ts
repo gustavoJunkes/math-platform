@@ -8,7 +8,7 @@ import { Variable } from '../model/variable.model';
 })
 export class FormulaService {
 
-  baseUrl = 'http://localhost:8080/api/formula';
+  baseUrl = 'https://math-platform.herokuapp.com/api/formula';
 
   constructor(private httpClient: HttpClient) { }
 
