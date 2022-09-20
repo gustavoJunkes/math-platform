@@ -28,6 +28,7 @@ Até o momento, o projeto conta com as seguintes funcionalidades:
   - Aumento percentual
   - Diminuição percentual  
 - Cálculo de número fatorial
+- Cadastro de fórmulas personalizadas (testes)
 
 ## Especificações técnicas
 
