@@ -1,35 +1,48 @@
 <app-header></app-header>
 
-<h1 class="page-title">{{post.title}}</h1>
-<small *ngIf="user"><p>Postado por {{user.nickname}}, {{post.date}}</p></small>
-
-<div class="calculation-card" style="height: 40%;">
-    <h1 class="card-title">Variáveis</h1>
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <div formArrayName="values" id="float-container">
-            <div *ngFor="let value of values.controls; let i = index">
-               <div [formGroupName]="i" class="input-container" id="input-container">
-                <label for="">{{post.formula.variables[i].variableName}}</label> 
-                <br>
-                <input type="text" formControlName="variableValue" class="input-field" >
-               </div>
-            </div>
+<mat-drawer-container>
+    <mat-drawer mode="over" #drawer > 
+        <div>
+            <app-sidebar></app-sidebar>
         </div>
-    
-        <button type="submit" class="calculate-button">Calcular</button>
-    </form>
-    
-</div>
-
-<div class="result-div" *ngIf="calculationResult">
-    <p>Resultado: {{calculationResult}}</p> <button class="copy-button" (click)="copy(calculationResult)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult">check</i>
-</div>
-
-<div class="explanation-card" *ngIf="showExplanation">
-    <p>
-        {{post.formula.explanation}}
-    </p>
-</div>
-<button (click)="showExplanation = !showExplanation"  class="show-explanation-button">Mostrar Explicação</button>
+    </mat-drawer>
+    <mat-drawer-content>
+        <button (click)="drawer.toggle()" style="background-color: white; border: 0ch; cursor: pointer;"><img src="../../../../assets/images/icons8-menu-64.png" style="background-color: white;" alt="menu-icon"></button>
+        <h1 class="page-title">{{post.title}}</h1>
+        <small *ngIf="user"><p>Postado por {{user.nickname}}, {{post.date}}</p></small>
+        
+        <div class="calculation-card" style="height: 40%;">
+            <h1 class="card-title">Variáveis</h1>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div formArrayName="values" id="float-container">
+                    <div *ngFor="let value of values.controls; let i = index">
+                       <div [formGroupName]="i" class="input-container" id="input-container">
+                        <label for="">{{post.formula.variables[i].variableName}}</label> 
+                        <br>
+                        <input type="text" formControlName="variableValue" class="input-field" >
+                       </div>
+                    </div>
+                </div>
+            
+                <button type="submit" class="calculate-button">Calcular</button>
+            </form>
+            
+        </div>
+        
+        <div class="result-div" *ngIf="calculationResult">
+            <p>Resultado: {{calculationResult}}</p> <button class="copy-button" (click)="copy(calculationResult)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult">check</i>
+        </div>
+        
+        <div class="explanation-card" *ngIf="showExplanation">
+            <p>
+                {{post.formula.explanation}}
+            </p>
+        </div>
+        <button (click)="showExplanation = !showExplanation"  class="show-explanation-button">Mostrar Explicação</button>
+        
+    </mat-drawer-content>
+</mat-drawer-container>
 
 <app-footer></app-footer>
+
+

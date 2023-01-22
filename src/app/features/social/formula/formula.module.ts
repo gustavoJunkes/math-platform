@@ -9,6 +9,8 @@ import { NewFormulaComponent } from './new-formula/new-formula.component';
 import { MyFormulasComponent } from './my-formulas/my-formulas.component';
 import { FormulaCalculationComponent } from './formula-calculation/formula-calculation.component';
 
+import {MatSidenavModule} from '@angular/material/sidenav';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { FormulaCalculationComponent } from './formula-calculation/formula-calcu
     FormulaRoutingModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSidenavModule
   ],
   providers: [
     PostService,

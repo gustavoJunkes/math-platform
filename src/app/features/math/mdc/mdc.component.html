@@ -1,8 +1,17 @@
 <app-header></app-header>
 
-<app-card-calculation [form]="formMdc" [title]="'MDC'" (resultObject)="calculateMdc($event)"></app-card-calculation>
-<div class="result-div" *ngIf="calculationResult">
-    <p>Resultado: {{calculationResult}}</p> <button class="copy-button" (click)="copy(calculationResult)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult">check</i>
-</div>
+<mat-drawer-container>
+    <mat-drawer mode="over" #drawer > 
+        <div>
+            <app-sidebar></app-sidebar>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+        <app-card-calculation [form]="formMdc" [title]="'MDC'" (resultObject)="calculateMdc($event)"></app-card-calculation>
+        <div class="result-div" *ngIf="calculationResult">
+            <p>Resultado: {{calculationResult}}</p> <button class="copy-button" (click)="copy(calculationResult)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult">check</i>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
 
 <app-footer></app-footer>

@@ -6,6 +6,8 @@ import { LegalRoutingModule } from './legal-routing.module';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { UseTermsComponent } from './use-terms/use-terms.component';
 
+import {MatSidenavModule} from '@angular/material/sidenav';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { UseTermsComponent } from './use-terms/use-terms.component';
   imports: [
     CommonModule,
     LegalRoutingModule,
-    SharedModule
+    SharedModule,
+    MatSidenavModule
+
   ]
 })
 export class LegalModule { }

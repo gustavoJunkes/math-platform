@@ -1,1 +1,11 @@
-<p>my-formulas works!</p>
+<mat-drawer-container>
+    <mat-drawer mode="over" #drawer > 
+        <div>
+            <app-sidebar></app-sidebar>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+        <button (click)="drawer.toggle()" style="background-color: white; border: 0ch; cursor: pointer;"><img src="../../../../assets/images/icons8-menu-64.png" style="background-color: white;" alt="menu-icon"></button>
+
+    </mat-drawer-content>
+</mat-drawer-container>

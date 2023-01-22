@@ -9,6 +9,7 @@ import { CalculationPostComponent } from './calculation-post/calculation-post.co
 import { DynamicFormQuestionComponent } from './dynamic-form-question/dynamic-form-question.component';
 import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -18,19 +19,22 @@ import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
     FooterComponent,
     CalculationPostComponent,
     DynamicFormQuestionComponent,
-    DynamicFormComponent
+    DynamicFormComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSidenavModule
   ],
   exports: [
     HeaderComponent,
     CardCalculationComponent,
     FooterComponent,
     CalculationPostComponent,
-    DynamicFormComponent
+    DynamicFormComponent,
+    SidebarComponent
   ]
 })
 export class SharedModule { }

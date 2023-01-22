@@ -3,4 +3,22 @@
     width: 20%;
     border-color: black;
     background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+#main-sidebar-div {
+    width: 300px
+}
+
+#div-links {
+    font-size: larger;
+    padding: 5%;
+    cursor: pointer;
+
+}
+
+.sidebar-link {
+    cursor: pointer;
+    height: 25px;
+    padding-top: 12px;
 }
