@@ -1,159 +1,174 @@
 <app-header></app-header>
 
-<h1 class="page-title">Porcentagem</h1>
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="over" #drawer > 
+        <div>
+            <app-sidebar></app-sidebar>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+        <button (click)="drawer.toggle()" style="background-color: white; border: 0ch; cursor: pointer;"><img src="../../../../assets/images/icons8-menu-64.png" style="background-color: white;" alt="menu-icon"></button>
+        <h1 class="page-title">Porcentagem</h1>
 
-<h2 class="page-subtitle">Calculadora de porcentagem</h2>
+        <h2 class="page-subtitle">Calculadora de porcentagem</h2>
 
-<app-card-calculation [form]="formPercentage1" [title]="'Quantos % um valor representa de outro'" (resultObject)="calculatePercentage1($event)"> </app-card-calculation>
-<div class="result-div" *ngIf="calculationResult1">
-    <p>Resultado: {{calculationResult1}}%</p> <button class="copy-button" (click)="copy(calculationResult1)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult1">check</i>
-</div>
+        <app-card-calculation [form]="formPercentage1" [title]="'Quantos % um valor representa de outro'" (resultObject)="calculatePercentage1($event)"> </app-card-calculation>
+        <div class="result-div" *ngIf="calculationResult1">
+            <p>Resultado: {{calculationResult1}}%</p> <button class="copy-button" (click)="copy(calculationResult1)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult1">check</i>
+        </div>
 
-<div class="div-explanation-button">
-    <div class="explanation-card" *ngIf="showExplanation01" >
-        <h2>Como calcular quantos % um valor representa de outro</h2>
-        <p>A calculadora acima é capaz de realizar este cálculo. A seguir veremos como o cálculo funciona.</p>
-        <p>
-            Quando falamos em porcentagem, falamos de um valor dividido por 100. Com isso em mente, quando falamos que 20 é 10% de 200,
-            estamos basicamente dizendo que 10 dividido 100, multiplacado por 200, é igual a 20.
-        </p>   
-        <p>
-            Logo, seguindo esta mesma lógica, para descobrir quantos por cento um valor representa de outro, basta seguir os seguintes passos:
-        </p>
-        <ol>
-            <li>Divida o primeiro valor pelo segundo. Por exemplo, 15 ÷ 150 = 0,1.</li>
-            <li>Em seguida, basta multiplicar o resultado obtido por 100. Por exemplo, 0,1 x 100 = 10.</li>
-        </ol> 
-        <p>
-           Pronto, agora sabemos que o valor 15 representa 10% de 150.
-        </p>
-         
-    </div>
-    <button (click)="showExplanation01 = !showExplanation01"  class="show-explanation-button">Mostrar Explicação</button>    
-</div>
+        <div class="div-explanation-button">
+            <div class="explanation-card" *ngIf="showExplanation01" >
+                <h2>Como calcular quantos % um valor representa de outro</h2>
+                <p>A calculadora acima é capaz de realizar este cálculo. A seguir veremos como o cálculo funciona.</p>
+                <p>
+                    Quando falamos em porcentagem, falamos de um valor dividido por 100. Com isso em mente, quando falamos que 20 é 10% de 200,
+                    estamos basicamente dizendo que 10 dividido 100, multiplacado por 200, é igual a 20.
+                </p>   
+                <p>
+                    Logo, seguindo esta mesma lógica, para descobrir quantos por cento um valor representa de outro, basta seguir os seguintes passos:
+                </p>
+                <ol>
+                    <li>Divida o primeiro valor pelo segundo. Por exemplo, 15 ÷ 150 = 0,1.</li>
+                    <li>Em seguida, basta multiplicar o resultado obtido por 100. Por exemplo, 0,1 x 100 = 10.</li>
+                </ol> 
+                <p>
+                Pronto, agora sabemos que o valor 15 representa 10% de 150.
+                </p>
+                
+            </div>
+            <button (click)="showExplanation01 = !showExplanation01"  class="show-explanation-button">Mostrar Explicação</button>    
+        </div>
 
-<app-card-calculation [form]="formPercentage2" [title]="'Quanto é x% de y'" (resultObject)="calculatePercentage2($event)"> </app-card-calculation>
-<div class="result-div" *ngIf="calculationResult2">
-    <p>Resultado: {{calculationResult2}}</p> <button class="copy-button" (click)="copy(calculationResult2)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult2">check</i>
-</div>
+        <app-card-calculation [form]="formPercentage2" [title]="'Quanto é x% de y'" (resultObject)="calculatePercentage2($event)"> </app-card-calculation>
+        <div class="result-div" *ngIf="calculationResult2">
+            <p>Resultado: {{calculationResult2}}</p> <button class="copy-button" (click)="copy(calculationResult2)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult2">check</i>
+        </div>
 
-<div class="div-explanation-button">
-    <div class="explanation-card" *ngIf="showExplanation02" >
-        <h2>Como calcular a porcentagem de um valor</h2>
-        <p>A calculadora acima é capaz de realizar este cálculo. A seguir veremos como o cálculo funciona.</p>
-        <p>
-            Quando falamos em porcentagem, falamos de um valor dividido por 100. Com isso em mente, quando falamos que 10% de 200 é 20,
-            estamos basicamente dizendo que 10 dividido por 100, multiplacado por 200, é igual a 20. 
-        </p>   
-        <p>
-            Exemplo:
-        </p>
-        <ul>
-            <li>10 ÷ 100 = 0,1 </li>
-            <li>0,1 x 200 = 20</li>
-            <li>10% de 200 é igual a 20</li>
-        </ul>
-        <p>
-            Logo, seguindo esta mesma lógica, para descobrir quantos por cento um valor representa de outro, basta seguir os seguintes passos:
-        </p>
-        <ol>
-            <li>Dividir o primeiro valor por 100 (afinal, falamos em 10 por cento, logo 10 / 100).</li>
-            <li>Em seguida, basta multiplicar o resultado obtido pelo valor total.</li>
-        </ol> 
-        <p>
-           Pronto, agora sabemos que o valor 20 representa 10% de 200.
-        </p>
-         
-    </div>
-    <button (click)="showExplanation02 = !showExplanation02"  class="show-explanation-button">Mostrar Explicação</button>    
-</div>
-
-<app-card-calculation [form]="formPercentage3" [title]="'Aumento percentual'" (resultObject)="calculatePercentage3($event)"> </app-card-calculation>
-<div class="result-div" *ngIf="calculationResult3">
-    <p>Resultado: {{calculationResult3}}%</p> <button class="copy-button" (click)="copy(calculationResult3)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult3">check</i>
-</div>
-<div class="div-explanation-button">
-    <div class="explanation-card" *ngIf="showExplanation03" >
-        <h2>Como calcular aumento percentual</h2>
-        <p>A calculadora acima é capaz de realizar este cálculo. A seguir veremos como o cálculo funciona.</p>
-        <p>
-            O aumento percentual se trata do aumento, em porcentagem, que um valor obteve em determinado período. 
-            Com isso em mente, sabemos que para calcular o percentual de aumento precisamos antes calcular o aumento, 
-            para em seguida descobrir quanto esse valor representa percentualmente do valor inicial.            
-        </p>   
-        <p>
-            Exemplo: temos que o valor 25 subiu para 30.
-        </p>
-        <ul>
-            <li>Primeiro, calculamos a diferença de valores: 30 - 25 = 5 </li>
-            <li>
-                Agora que sabemos quanto o valor aumentou, temos que descobrir qual valor percentual o aumento representa do total, utilizando o mesmo cálculo de percentual mostrado acima: 
+        <div class="div-explanation-button">
+            <div class="explanation-card" *ngIf="showExplanation02" >
+                <h2>Como calcular a porcentagem de um valor</h2>
+                <p>A calculadora acima é capaz de realizar este cálculo. A seguir veremos como o cálculo funciona.</p>
+                <p>
+                    Quando falamos em porcentagem, falamos de um valor dividido por 100. Com isso em mente, quando falamos que 10% de 200 é 20,
+                    estamos basicamente dizendo que 10 dividido por 100, multiplacado por 200, é igual a 20. 
+                </p>   
+                <p>
+                    Exemplo:
+                </p>
                 <ul>
-                    <li>5 ÷ 25 = 0,2</li>
-                    <li>0,2 x 100 = 20</li>
+                    <li>10 ÷ 100 = 0,1 </li>
+                    <li>0,1 x 200 = 20</li>
+                    <li>10% de 200 é igual a 20</li>
                 </ul>
-            </li>
-            <li>O aumento percentual foi de 20%.</li>
-        </ul>
-        <p>
-            Logo, seguindo esta mesma lógica, para descobrir quantos por cento um valor representa de outro, basta seguir os seguintes passos:
-        </p>
-        <ol>
-            <li>Subtrair o segundo valor pelo primeiro. Exemplo: 15 - 10 = 5</li>
-            <li>Em seguida, dividimos este resultado pelo primeiro valor. Exemplo: 5 ÷ 10 = 0,5</li>
-            <li>Finalmente, multiplicamos este resultado por 100. Exemplo: 0,5 x 100 = 50</li>
-        </ol> 
-        <p>
-           Pronto, pudemos observar que o valor 10, que aumentou para 15, teve um aumento de 50%.
-        </p>
-         
-    </div>
-    <button (click)="showExplanation03 = !showExplanation03"  class="show-explanation-button">Mostrar Explicação</button>    
-</div>
+                <p>
+                    Logo, seguindo esta mesma lógica, para descobrir quantos por cento um valor representa de outro, basta seguir os seguintes passos:
+                </p>
+                <ol>
+                    <li>Dividir o primeiro valor por 100 (afinal, falamos em 10 por cento, logo 10 / 100).</li>
+                    <li>Em seguida, basta multiplicar o resultado obtido pelo valor total.</li>
+                </ol> 
+                <p>
+                Pronto, agora sabemos que o valor 20 representa 10% de 200.
+                </p>
+                
+            </div>
+            <button (click)="showExplanation02 = !showExplanation02"  class="show-explanation-button">Mostrar Explicação</button>    
+        </div>
 
-
-
-<app-card-calculation [form]="formPercentage4" [title]="'Diminuição percentual'" (resultObject)="calculatePercentage4($event)"> </app-card-calculation>
-<div class="result-div" *ngIf="calculationResult4">
-    <p>Resultado: {{calculationResult4}}%</p> <button class="copy-button" (click)="copy(calculationResult4)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult4">check</i>
-</div>
-<div class="div-explanation-button">
-    <div class="explanation-card" *ngIf="showExplanation04" >
-        <h2>Como calcular diminuição percentual</h2>
-        <p>A calculadora acima é capaz de realizar este cálculo. A seguir veremos como o cálculo funciona.</p>
-        <p>
-            A diminuição percentual se trata do da diminuição, em porcentagem, que um valor obteve em determinado período. 
-            Com isso em mente, sabemos que para calcular o percentual de diminuição precisamos antes calcular o quanto o valor diminuiu, 
-            para em seguida descobrir quanto esse valor representa percentualmente do valor inicial.            
-        </p>   
-        <p>
-            Exemplo: temos que o valor 45 diminuiu para 30.
-        </p>
-        <ul>
-            <li>Primeiro, calculamos a diferença de valores: 45 - 30 = 15 </li>
-            <li>
-                Agora que sabemos quanto o valor diminuiu, temos que descobrir qual valor percentual a diminuição representa do total, utilizando o mesmo cálculo de percentual mostrado acima: 
+        <app-card-calculation [form]="formPercentage3" [title]="'Aumento percentual'" (resultObject)="calculatePercentage3($event)"> </app-card-calculation>
+        <div class="result-div" *ngIf="calculationResult3">
+            <p>Resultado: {{calculationResult3}}%</p> <button class="copy-button" (click)="copy(calculationResult3)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult3">check</i>
+        </div>
+        <div class="div-explanation-button">
+            <div class="explanation-card" *ngIf="showExplanation03" >
+                <h2>Como calcular aumento percentual</h2>
+                <p>A calculadora acima é capaz de realizar este cálculo. A seguir veremos como o cálculo funciona.</p>
+                <p>
+                    O aumento percentual se trata do aumento, em porcentagem, que um valor obteve em determinado período. 
+                    Com isso em mente, sabemos que para calcular o percentual de aumento precisamos antes calcular o aumento, 
+                    para em seguida descobrir quanto esse valor representa percentualmente do valor inicial.            
+                </p>   
+                <p>
+                    Exemplo: temos que o valor 25 subiu para 30.
+                </p>
                 <ul>
-                    <li>15 ÷ 45 = 0,333</li>
-                    <li>0,333 x 100 = 33,3</li>
+                    <li>Primeiro, calculamos a diferença de valores: 30 - 25 = 5 </li>
+                    <li>
+                        Agora que sabemos quanto o valor aumentou, temos que descobrir qual valor percentual o aumento representa do total, utilizando o mesmo cálculo de percentual mostrado acima: 
+                        <ul>
+                            <li>5 ÷ 25 = 0,2</li>
+                            <li>0,2 x 100 = 20</li>
+                        </ul>
+                    </li>
+                    <li>O aumento percentual foi de 20%.</li>
                 </ul>
-            </li>
-            <li>A diminuição percentual foi de 33,3%.</li>
-        </ul>
-        <p>
-            Logo, seguindo esta mesma lógica, para descobrir a diminuição percentual, basta seguir os seguintes passos:
-        </p>
-        <ol>
-            <li>Subtrair o segundo valor pelo primeiro. Exemplo: 15 - 10 = 5</li>
-            <li>Em seguida, dividimos este resultado pelo primeiro valor. Exemplo: 5 ÷ 15 = 0,333</li>
-            <li>Finalmente, multiplicamos este resultado por 100. Exemplo: 0,333 x 100 = 33,3</li>
-        </ol> 
-        <p>
-           Pronto, pudemos observar que o valor 15, que diminuiu para 10, teve uma diminuição de 33,3%.
-        </p>
-         
-    </div>
-    <button (click)="showExplanation04 = !showExplanation04"  class="show-explanation-button">Mostrar Explicação</button>    
-</div>
+                <p>
+                    Logo, seguindo esta mesma lógica, para descobrir quantos por cento um valor representa de outro, basta seguir os seguintes passos:
+                </p>
+                <ol>
+                    <li>Subtrair o segundo valor pelo primeiro. Exemplo: 15 - 10 = 5</li>
+                    <li>Em seguida, dividimos este resultado pelo primeiro valor. Exemplo: 5 ÷ 10 = 0,5</li>
+                    <li>Finalmente, multiplicamos este resultado por 100. Exemplo: 0,5 x 100 = 50</li>
+                </ol> 
+                <p>
+                Pronto, pudemos observar que o valor 10, que aumentou para 15, teve um aumento de 50%.
+                </p>
+                
+            </div>
+            <button (click)="showExplanation03 = !showExplanation03"  class="show-explanation-button">Mostrar Explicação</button>    
+        </div>
+
+
+
+        <app-card-calculation [form]="formPercentage4" [title]="'Diminuição percentual'" (resultObject)="calculatePercentage4($event)"> </app-card-calculation>
+        <div class="result-div" *ngIf="calculationResult4">
+            <p>Resultado: {{calculationResult4}}%</p> <button class="copy-button" (click)="copy(calculationResult4)">Copiar</button> <i class="material-icons" *ngIf="valueCopied == calculationResult4">check</i>
+        </div>
+        <div class="div-explanation-button">
+            <div class="explanation-card" *ngIf="showExplanation04" >
+                <h2>Como calcular diminuição percentual</h2>
+                <p>A calculadora acima é capaz de realizar este cálculo. A seguir veremos como o cálculo funciona.</p>
+                <p>
+                    A diminuição percentual se trata do da diminuição, em porcentagem, que um valor obteve em determinado período. 
+                    Com isso em mente, sabemos que para calcular o percentual de diminuição precisamos antes calcular o quanto o valor diminuiu, 
+                    para em seguida descobrir quanto esse valor representa percentualmente do valor inicial.            
+                </p>   
+                <p>
+                    Exemplo: temos que o valor 45 diminuiu para 30.
+                </p>
+                <ul>
+                    <li>Primeiro, calculamos a diferença de valores: 45 - 30 = 15 </li>
+                    <li>
+                        Agora que sabemos quanto o valor diminuiu, temos que descobrir qual valor percentual a diminuição representa do total, utilizando o mesmo cálculo de percentual mostrado acima: 
+                        <ul>
+                            <li>15 ÷ 45 = 0,333</li>
+                            <li>0,333 x 100 = 33,3</li>
+                        </ul>
+                    </li>
+                    <li>A diminuição percentual foi de 33,3%.</li>
+                </ul>
+                <p>
+                    Logo, seguindo esta mesma lógica, para descobrir a diminuição percentual, basta seguir os seguintes passos:
+                </p>
+                <ol>
+                    <li>Subtrair o segundo valor pelo primeiro. Exemplo: 15 - 10 = 5</li>
+                    <li>Em seguida, dividimos este resultado pelo primeiro valor. Exemplo: 5 ÷ 15 = 0,333</li>
+                    <li>Finalmente, multiplicamos este resultado por 100. Exemplo: 0,333 x 100 = 33,3</li>
+                </ol> 
+                <p>
+                Pronto, pudemos observar que o valor 15, que diminuiu para 10, teve uma diminuição de 33,3%.
+                </p>
+                
+            </div>
+            <button (click)="showExplanation04 = !showExplanation04"  class="show-explanation-button">Mostrar Explicação</button>    
+        </div>
+
+    </mat-drawer-content>
+</mat-drawer-container>
+
+
+
+
 
 <app-footer></app-footer>
