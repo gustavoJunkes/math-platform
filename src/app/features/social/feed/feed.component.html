@@ -1,9 +1,23 @@
 <app-header></app-header>
-<h1 class="page-title">Cálculos da comunidade</h1>
-<input id="new-post-button" type="button" value="Compartilhar nova fórmula" (click)="redirectToNewFormula()">
 
-<div class="content-div" *ngFor="let post of posts">
-    <app-calculation-post [post]="post"></app-calculation-post>
-</div>
+<mat-drawer-container>
+    <mat-drawer mode="over" #drawer > 
+        <div>
+            <app-sidebar></app-sidebar>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+        <button (click)="drawer.toggle()" style="background-color: white; border: 0ch; cursor: pointer;"><img src="../../../../assets/images/icons8-menu-64.png" style="background-color: white;" alt="menu-icon"></button>
+
+        <h1 class="page-title">Cálculos da comunidade</h1>
+        <input id="new-post-button" type="button" value="Compartilhar nova fórmula" (click)="redirectToNewFormula()">
+
+        <div class="content-div" *ngFor="let post of posts">
+            <app-calculation-post [post]="post"></app-calculation-post>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
 
 <app-footer></app-footer>
+
+

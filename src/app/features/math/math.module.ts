@@ -10,6 +10,7 @@ import { PercentageComponent } from './percentage/percentage.component';
 import { FactorialComponent } from './factorial/factorial.component';
 import { MdcComponent } from './mdc/mdc.component';
 import { CientificNotationComponent } from './cientific-notation/cientific-notation.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { CientificNotationComponent } from './cientific-notation/cientific-notat
     MathRoutingModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSidenavModule
   ]
 })
 

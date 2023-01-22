@@ -5,6 +5,8 @@ import { CommonModule } from '@angular/common';
 import { SocialRoutingModule } from './social-routing.module';
 import { FeedComponent } from './feed/feed.component';
 
+import {MatSidenavModule} from '@angular/material/sidenav';
+
 
 @NgModule({
   declarations: [
@@ -13,7 +15,8 @@ import { FeedComponent } from './feed/feed.component';
   imports: [
     CommonModule,
     SocialRoutingModule,
-    SharedModule
+    SharedModule,
+    MatSidenavModule
   ]
 })
 export class SocialModule { }

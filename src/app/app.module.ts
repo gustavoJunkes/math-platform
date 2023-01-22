@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
+import {MatSidenavModule} from '@angular/material/sidenav';
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -16,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     RouterModule.forRoot([]),
     FeaturesModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSidenavModule
   ],
   exports: [],
   providers: [],
