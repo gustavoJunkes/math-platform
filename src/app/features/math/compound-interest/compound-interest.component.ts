@@ -18,7 +18,7 @@ export class CompoundInterestComponent implements OnInit {
   interestCalculationResult1!: number;
   interestCalculationResult2!: number;
 
-  showExplanation: boolean = true;
+  showExplanation: boolean = false;
   resultObject!: any;
   title: string = "Cálculo de Juros"
 
@@ -65,8 +65,8 @@ export class CompoundInterestComponent implements OnInit {
   calculate1(form: FormGroup) {
     var initialValue = Number(form.controls['Valor inicial'].value);
     var interestValue = Number(form.controls['Valor dos juros'].value);
-    var numberPeriods = Number(form.controls['Valor por período'].value);
-    var valuePeriod = Number(form.controls['Número de períodos'].value);
+    var numberPeriods = Number(form.controls['Número de períodos'].value);
+    var valuePeriod = Number(form.controls['Valor por período'].value); 
 
     var finalValue = initialValue;
     var numericInterestValue = 0.;
