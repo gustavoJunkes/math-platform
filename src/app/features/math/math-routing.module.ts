@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   {
     path: "",
-    redirectTo: "juros",
+    redirectTo: "porcentagem",
     pathMatch: "full"
   },
   {
