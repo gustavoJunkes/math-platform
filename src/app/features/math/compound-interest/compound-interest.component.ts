@@ -18,7 +18,9 @@ export class CompoundInterestComponent implements OnInit {
   interestCalculationResult1!: number;
   interestCalculationResult2!: number;
 
-  showExplanation: boolean = false;
+  showExplanation1: boolean = false;
+  showExplanation2: boolean = false;
+
   resultObject!: any;
   title: string = "Cálculo de Juros"
 
@@ -88,8 +90,12 @@ export class CompoundInterestComponent implements OnInit {
     console.log(finalValue)
   }
 
-  changeShowExplanation() {
-    this.showExplanation = !this.showExplanation;
+  changeShowExplanation1() {
+    this.showExplanation1 = !this.showExplanation1;
+  }
+
+  changeShowExplanation2() {
+    this.showExplanation2 = !this.showExplanation2;
   }
 
   calculate2(form: FormGroup) {
