@@ -18,10 +18,10 @@ export class PercentageComponent implements OnInit {
   calculationResult3!: number;
   calculationResult4!: number;
 
-  showExplanation01: boolean = true;
-  showExplanation02: boolean = true;
-  showExplanation03: boolean = true;
-  showExplanation04: boolean = true;
+  showExplanation01: boolean = false;
+  showExplanation02: boolean = false;
+  showExplanation03: boolean = false;
+  showExplanation04: boolean = false;
 
   valueCopied!: Object;
 
