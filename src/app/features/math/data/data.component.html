@@ -1,9 +1,26 @@
 <app-header></app-header>
 
-<app-card-calculation [form]="diferenceBetweenDatasForm" (resultObject)="calculateDiferenceBetweenDates($event)" [title]="title"></app-card-calculation>
 
-<app-card-calculation [form]="diferenceBetweenDatasForm" (resultObject)="calculateDiferenceBetweenDates($event)" [title]="title"></app-card-calculation>
+<mat-drawer-container>
+    <mat-drawer mode="over" #drawer > 
+        <div>
+            <app-sidebar></app-sidebar>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+        <button (click)="drawer.toggle()" style="background-color: white; border: 0ch; cursor: pointer;"><img src="../../../../assets/images/icons8-menu-64.png" style="background-color: white;" alt="menu-icon"></button>
+        
+        <app-card-calculation [form]="diferenceBetweenDatasForm" (resultObject)="calculateDiferenceBetweenDates($event)" [title]="title"></app-card-calculation>
 
-<app-card-calculation [form]="diferenceBetweenDatasForm" (resultObject)="calculateDiferenceBetweenDates($event)" [title]="title"></app-card-calculation>
+        <app-card-calculation [form]="diferenceBetweenDatasForm" (resultObject)="calculateDiferenceBetweenDates($event)" [title]="title"></app-card-calculation>
+
+        <app-card-calculation [form]="diferenceBetweenDatasForm" (resultObject)="calculateDiferenceBetweenDates($event)" [title]="title"></app-card-calculation>
+
+    </mat-drawer-content>
+</mat-drawer-container>
 
 <app-footer></app-footer>
+
+
+
+

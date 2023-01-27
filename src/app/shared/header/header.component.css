@@ -6,8 +6,6 @@
     box-sizing: border-box;
     align-items: center;
     position: relative;
-    align-items: center;
-
 }
 
 #title {
@@ -64,6 +62,16 @@ p {
     background-color: #3a3cff;
 }
 
+#icons {
+    display: none;
+    width: fit-content;
+    margin-left: auto;
+    top: 100px;
+    position: absolute;
+
+}
+
+
 @media (max-width: 950px) {
     div#title {
         font-size: 15em;
@@ -95,7 +103,16 @@ p {
         display: none;
     }
 
-  
+    #title-text {
+        display: none;
+    }
+
+    #icons {
+        /*display: flex;*/
+    }
+
+
+   
 
 }
 
