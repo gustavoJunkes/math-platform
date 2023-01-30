@@ -1,6 +1,6 @@
 # math-platform
 
-> - Acesse o [ambiente de produção](http://math-platform.com.br)
+> - Acesse o [ambiente de produção](https://math-platform.com.br)
 
 ## Sobre o projeto
 
